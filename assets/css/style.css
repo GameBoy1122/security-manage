@@ -9,13 +9,23 @@ body {
   text-decoration: none;
 }
 .bg-footer-main {
-  background-color: #1b3d84;
+  background-color: #116DB6;
 }
 .bg-footer-copyright {
-  background-color: #011846;
+  background-color: #116DB6;
 }
 .bg-nav-social {
   background-color: #011846;
+}
+.bg-nav-main{
+  background-color: #116DB6;
+}
+.nav-link {
+  color: white;
+}
+.nav-link.active {
+  color: white !important;
+  text-decoration: underline;
 }
 .carousel-control-prev,
 .carousel-control-next {
