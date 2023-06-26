@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+body {
+  font-family: "Kanit", sans-serif;
+}
+.text-secondary {
+  color: white;
+}
+.list-decoration-none {
+  text-decoration: none;
+}
+.bg-footer-main {
+  background-color: #1b3d84;
+}
+.bg-footer-copyright {
+  background-color: #011846;
+}
+.bg-nav-social {
+  background-color: #011846;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #dddcdc;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  top: 50%;
+  margin-left: 50px;
+  margin-right: 50px;
+  transform: translateY(-50%);
+  color: black;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon /*, .carousel-indicators */ {
+  filter: invert(100%);
+}
+.carousel .carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+.image-with-text {
+  display: flex;
+  align-items: center;
+}
+
+.image-with-text img {
+  margin-right: 5px;
+}
+.banner_1 {
+  background-color: #506faf;
+  color: white;
+}
+.card-custom {
+  overflow: hidden;
+  border-radius: 2.5%;
+  box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+}
+
+.card-custom-img {
+  height: 300px;
+  min-height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-color: inherit;
+}
+
+/* First border-left-width setting is a fallback */
+.card-custom-img::after {
+  position: absolute;
+  content: "";
+  top: 261px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-top-width: 40px;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 545px;
+  border-left-width: calc(575px - 5vw);
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: inherit;
+}
+
+.card-custom-avatar img {
+  border-radius: 10%;
+  box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+  position: absolute;
+  top: 235px;
+  left: 2.5rem;
+  width: 60px;
+  height: 60px;
+}
+.link_viewmore {
+  text-decoration: none;
+  color: #1b3d84;
+}
+.btn-viewmore {
+  border-radius: 25px;
+  width: 130px;
+}
+#Ourservices{
+  background-color:#E5E5E5;
+}
