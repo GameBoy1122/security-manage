@@ -48,7 +48,7 @@
 
         <div class="row ms-5 ps-5">
             <div class="col-auto">
-                <h3 style="color: #1B3D84; font-weight: bold;">สำนักงานอำนวยการหลักสูตรการบริหารจัดการด้านความมั่นคงขั้นสูง</h3>
+                <h3 style="color: #1B3D84; font-weight: bold;">สถานที่อบรม</h3>
             </div>
 
             <div class="row mt-5">
@@ -58,7 +58,7 @@
                         <div class="col-auto ">
                             <div class="btn icon m-0"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i></div>
                         </div>
-                        <div class="col-auto pt-2">
+                        <div class="col-auto  pt-2">
                             เลขที่ 144/4 หมู่ที่ 4 ต.บางรักพัฒนา อ.บางบัวทอง จ.นนทบุรี 11110
                         </div>
                     </div>
