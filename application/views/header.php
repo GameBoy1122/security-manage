@@ -57,22 +57,22 @@ $current_url_array = explode("/", uri_string());
 						<a class="nav-link active" aria-current="page" href="<?php echo base_url('') ?>">หน้าหลัก</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?php echo base_url('About') ?>">โครงสร้างหลักสูตร</a>
+						<a class="nav-link" href="#">โครงสร้างหลักสูตร</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?php echo base_url('About') ?>">กรรมการอำนวยการหลักสูตร</a>
+						<a class="nav-link" href="<?php echo base_url('Managing_Director') ?>">กรรมการอำนวยการหลักสูตร</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?php echo base_url('review') ?>">วิทยากร</a>
+						<a class="nav-link" href="<?php echo base_url('Lecturer') ?>">วิทยากร</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?php echo base_url('knowledge') ?>">ข่าวสาร/กิจกรรม</a>
+						<a class="nav-link" href="<?php echo base_url('News') ?>">ข่าวสาร/กิจกรรม</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?php echo base_url('knowledge') ?>">ทำเนียบรุ่น</a>
+						<a class="nav-link" href="#">ทำเนียบรุ่น</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?php echo base_url('knowledge') ?>">ดาวน์โหลดเอกสาร</a>
+						<a class="nav-link" href="<?php echo base_url('download') ?>">ดาวน์โหลดเอกสาร</a>
 					</li>
 					<li class="nav-item dropdown me-3">
 						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -80,7 +80,7 @@ $current_url_array = explode("/", uri_string());
 						</a>
 						<ul class="dropdown-menu">
 							<li><a class="dropdown-item" href="<?php echo base_url('contact') ?>">สำนักงานอำนวยการ</a></li>
-							<li><a class="dropdown-item" href="<?php echo base_url('contact') ?>">สถานที่อบรม</a></li>
+							<li><a class="dropdown-item" href="<?php echo base_url('Place') ?>">สถานที่อบรม</a></li>
 						</ul>
 					</li>
 				</ul>
