@@ -137,7 +137,7 @@
                 </div>
             </div>
 
-            <div class="row mb-5">
+            <div class="row mt-5 mb-5">
                 <div class="col-6 " style="text-align: end;">
                     <button type="submit" class="btn btn_click">ดูหลักสูตร</button>
                 </div>
