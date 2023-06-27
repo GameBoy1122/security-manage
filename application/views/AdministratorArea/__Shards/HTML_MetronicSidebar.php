@@ -95,7 +95,7 @@ $head_open = "kt-menu__item--here kt-menu__item--open";
 
                 ?>
 
-                    <li class="kt-menu__section ">
+                    <li class="kt-menu__section d-none">
 
                         <h3 class="kt-menu__section-text">Administrator access</h3>
 
@@ -103,7 +103,7 @@ $head_open = "kt-menu__item--here kt-menu__item--open";
 
                     </li>
 
-                    <li class="kt-menu__item kt-menu__item--submenu <?php if ($class == 'Administrator' || $class == 'administrator_group') echo $head_open;
+                    <li class="kt-menu__item kt-menu__item--submenu d-none <?php if ($class == 'Administrator' || $class == 'administrator_group') echo $head_open;
                                                                     else echo ''; ?>" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
 
                         <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
