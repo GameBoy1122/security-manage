@@ -1,4 +1,5 @@
-<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+<?php if (!defined('BASEPATH'))
+     exit('No direct script access allowed');
 
 function getVariable($var, $key)
 {
@@ -27,35 +28,70 @@ function getWording($page, $key)
                'th' => array(
                     'lng' => 'th',
                     'homepage' => 'หน้าแรก',
-                    'ab' => 'เกี่ยวกับเรา',
-                    'services' => 'บริการของเรา',
-                    'testimonial' => 'เสียงจากผู้ใช้บริการจริง',
-                    'article' => 'คลังความรู้',
-                    'contact_us' => 'ติดต่อ',
-                    'treatment' => 'การรักษา',
+                    'aboutus' => 'เกี่ยวกับเรา',
+                    'history' => 'ความเป็นมาของศรีกรุงวัฒนา',
+                    'message' => 'สารจากประธานกรรมการ',
+                    'directors' => 'คณะกรรมการ',
+                    'businesses' => 'ธุรกิจของเรา',
+                    'corporate' => 'การกำกับดูแลกิจการ',
+                    'news' => 'ข่าวประชาสัมพันธ์',
+                    'career' => 'ร่วมงานกับเรา',
+                    'contact' => 'ติดต่อเรา',
+                    'more_businesses' => 'ธุรกิจอื่นๆของเรา',
+                    'link' => 'ลิงค์',
+                    'view_more' => 'เพิ่มเติม',
+                    'job_position' => 'ตำแหน่งงาน',
+                    'tel' => 'โทร',
+                    'email' => 'อีเมล',
+                    'time' => 'เวลาทำการ',
+                    'cookie' => "<div class='cookie-consent'>
+          <p>เว็บไซด์นี้ใช้คุกกี้เพื่อช่วยให้ท่านได้รับประสบการณ์ที่ดีที่สุดบนเว็บไซด์ของเรา </p><span class='pointer' data-bs-toggle='modal' data-bs-target='#exampleModal' style='text-decoration: underline;cursor: pointer;'>ศึกษาข้อมูลเพิ่มเติม</span>
+                    <form method='post'>
+                      <button type='submit' name='accept-cookies'>ยอมรับ</button>
+                    </form>
+                </div>",
+                    'business' => '<h3 style="color:#021437"><b>ธุรกิจ<span style="color:#3DB1E4">ของเรา</span></b></h3>',
+
                ),
                'en' => array(
                     'lng' => 'en',
                     'homepage' => 'Home',
-                    'ab' => 'About us',
-                    'services' => 'Services',
-                    'testimonial' => 'Testimonial',
-                    'article' => 'Article',
-                    'contact_us' => 'Contact us',
-                    'treatment' => 'Treatment',
+                    'aboutus' => 'About us',
+                    'history' => 'Advanced Security Mangement Programwattana History',
+                    'message' => 'Message from the Chairman',
+                    'directors' => 'Board of Directors',
+                    'businesses' => 'Our Businesses',
+                    'corporate' => 'Corporate Governance',
+                    'news' => 'News',
+                    'career' => 'Career',
+                    'contact' => 'Contact us',
+                    'more_businesses' => 'other our businesses',
+                    'link' => 'Link',
+                    'view_more' => 'View more',
+                    'job_position' => 'Job position',
+                    'tel' => 'Tel',
+                    'email' => 'Email',
+                    'time' => 'Time opening',
+                    'cookie' => "<div class='cookie-consent'>
+                    <p>This website uses cookies to ensure you get the best experience on our website.</p><span class='pointer' data-bs-toggle='modal' data-bs-target='#exampleModal-1' style='text-decoration: underline;cursor: pointer;'>Learn More</span>
+                    <form method='post'>
+                      <button type='submit' name='accept-cookies'>Accept</button>
+                    </form>
+                </div>",
+                    'business' => '<h3 style="color:#021437"><b>Our <span style="color:#3DB1E4">Business</span></b></h3>',
+               )
+          ),
+          'download' => array(
+               'th' => array(
+                    'items' => 'รายการ',
+                    '' => '',
                ),
-               'ae' => array(
-                    'lng' => 'ae',
-                    'homepage' => 'الصفحة الرئيسية​',
-                    'ab' => 'النبذة​ عنا​',
-                    'services' => 'خدمتنا ',
-                    'testimonial' => 'الشهادات و التوصيات​',
-                    'article' => 'المقالات وعلم ​التشريح​',
-                    'contact_us' => 'التواصل معنا',
-                    'treatment' => 'العلاجات ',
+               'en' => array(
+                    'items' => 'Items',
+                    '' => '',
                ),
+          ),
 
-          )
      );
 
      $language = $ci->session->userdata("CURRENT_LANGUAGE");
