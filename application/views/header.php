@@ -57,7 +57,7 @@ $current_url_array = explode("/", uri_string());
 						<a class="nav-link active" aria-current="page" href="<?php echo base_url('') ?>">หน้าหลัก</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">โครงสร้างหลักสูตร</a>
+						<a class="nav-link" href="<?php echo base_url('Course') ?>">โครงสร้างหลักสูตร</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="<?php echo base_url('Managing_Director') ?>">กรรมการอำนวยการหลักสูตร</a>
