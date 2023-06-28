@@ -160,6 +160,7 @@ $db['default'] = array(
 
 	'database' => 'admin',
 
+
 	'dbdriver' => 'mysqli',
 
 	'dbprefix' => '',
