@@ -95,12 +95,20 @@
         }
     </style>
 
-    <section class="head mb-5" style=" position: relative;">
+   <section>
 
-        <img src="<?php echo base_url('/assets/img/topic_pic.png'); ?>" alt="topic_pic" style="width:100%;">
-        <div class="topic_header">ดาวน์โหลดเอกสาร</div>
-    </section>
-
+   </section>           
+            <div class="slide_head mb-5 pb-3">
+                <div class="col-12 ">
+                    <img class="w-100" src="<?php echo base_url('/assets/img/homepic.png'); ?>">
+                </div>
+                <div class="col-12 ">
+                    <img class="w-100" src="<?php echo base_url('/assets/img/homepic.png'); ?>">
+                </div>
+                <div class="col-12 ">
+                    <img class="w-100" src="<?php echo base_url('/assets/img/homepic.png'); ?>">
+                </div>
+            </div>
     <section>
 
         <div class="container">
@@ -246,6 +254,8 @@
                 arrows: true,
                 dots: true,
                 infinite: false,
+                autoplay: true,
+                autoplaySpeed: 4000,
                 speed: 300,
                 slidesToShow: 4,
                 slidesToScroll: 4,
@@ -276,6 +286,19 @@
                     // settings: "unslick"
                     // instead of a settings object
                 ]
+            });
+        });
+    </script>
+
+<script>
+        $(document).ready(function() {
+            $('.slide_head').slick({
+                prevArrow: '<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>',
+                nextArrow: '<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>',
+                dots: true,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                infinite: true,
             });
         });
     </script>
