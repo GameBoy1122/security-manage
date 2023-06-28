@@ -97,7 +97,7 @@
                             เปิดรับสมัคร
                         </button>
                     </h2>
-                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingTwo">
                         <div class="accordion-body box">
                             สมัครด้วยตนเองที่สำนักงานหลักสูตร หรือสมัครผ่านทางออนไลน์<br>เว็บไซต์ www.asmp-f.com<br>ระหว่างวันที่ 3 ก.ค. 2566 – 31 ส.ค. 2566 วันจันทร์ – ศุกร์ ในเวลาราชการ
                         </div>
@@ -112,7 +112,7 @@
                             วิธีการคัดเลือก
                         </button>
                     </h2>
-                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingThree">
                         <div class="accordion-body box">
                             - การสัมภาษณ์ ในวันที่ 20 ก.ค. 2566 – 15 ก.ย. 2566<br>- ประกาศผลการคัดเลือก 20 ก.ย. 2566 ที่ www.asmp-f.com
                         </div>
@@ -127,7 +127,7 @@
                             คุณสมบัติ
                         </button>
                     </h2>
-                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingFour">
                         <div class="accordion-body box ps-2">
                             <ol>
                                 <li>การศึกษาระดับปริญญาตรีขึ้นไป</li>
@@ -147,7 +147,7 @@
                             หลักฐานการสมัคร
                         </button>
                     </h2>
-                    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive">
+                    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingFive">
                         <div class="accordion-body box ps-2">
                             <ol>
                                 <li>ใบสมัคร</li>
@@ -168,7 +168,7 @@
                             รายงานตัวและชำระเงิน
                         </button>
                     </h2>
-                    <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSix">
+                    <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingSix">
                         <div class="accordion-body box">
                             ผู้ได้รับการคัดเลือกรายงานตัว<br>ณ สำนักงานหลักสูตร เวลา 09.00-15.00 น.<br>วันที่ 25 ก.ย. - 6 ต.ค. 2566
                         </div>
@@ -183,7 +183,7 @@
                             ค่าใช้จ่าย
                         </button>
                     </h2>
-                    <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSeven">
+                    <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingSeven">
                         <div class="accordion-body box ps-2">
                             <span class="ps-3">ค่าใช้จ่ายในอัตราต่อไปนี้</span>
                             <ul>
@@ -204,7 +204,7 @@
                             สถานที่สมัคร/สอบถามรายละเอียดเพิ่มเติม
                         </button>
                     </h2>
-                    <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingEight">
+                    <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingEight">
                         <div class="accordion-body box">
                             สำนักงานอำนวยการหลักสูตรฯ มูลนิธิการจัดการเพื่อความมั่นคง
                             <br>ติดกับสำนักงานสรรพากร นนทบุรี 2
@@ -226,7 +226,7 @@
                             การสำเร็จการศึกษา
                         </button>
                     </h2>
-                    <div id="panelsStayOpen-collapseNine" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingNine">
+                    <div id="panelsStayOpen-collapseNine" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingNine">
                         <div class="accordion-body box ps-2">
                             <ul>
                                 <li>ผู้สำเร็จการศึกษา ตามหลักเกณฑ์ที่กำหนด</li>
@@ -238,10 +238,9 @@
             </div>
 
             <div class="row justify-content-center mt-5 mb-5 ">
-                <button type="submit" class="btn btn_click">สมัคร</button>
+                <div class="col-12 text-center">
+                    <a href="<?php echo base_url('Enroll_detail') ?>"> <button type="submit" class="btn btn_click">สมัคร</button></a>
+                </div>
             </div>
-
-
-
         </div>
     </section>
