@@ -144,11 +144,7 @@ class Bannermain extends CI_Controller
 
                 $file_name = $upload_data['file_name'];
 
-
-
                 $bannermain->image = '/assets/uploads/bannermain/'.$file_name;
-
-                
 
             }
 
