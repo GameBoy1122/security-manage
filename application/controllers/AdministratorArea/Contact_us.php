@@ -99,10 +99,8 @@ class Contact_us extends CI_Controller
             }
 
             $Contact_us->status = $this->input->post("status");
-            $Contact_us->address_th = $this->input->post("address_th");
-            $Contact_us->address_en = $this->input->post("address_en");
-            $Contact_us->time_th = $this->input->post("time_th");
-            $Contact_us->time_en = $this->input->post("time_en");
+            $Contact_us->address = $this->input->post("address");
+            $Contact_us->time = $this->input->post("time");
             $Contact_us->email = $this->input->post("email");
             $Contact_us->tel = $this->input->post("tel");
             $Contact_us->facebook = $this->input->post("facebook");
