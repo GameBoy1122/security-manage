@@ -421,7 +421,7 @@
             <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 mt-2">
                 <div class="form-outline">
                     <label class="form-label lable_show" for="work_province">จังหวัด</label>
-                    <select class="form-select day_select work_province" aria-label="Default select example">
+                    <select class="form-select day_select work_province select2-single" id="work_province" aria-label="Default select example">
                         <option selected><span style="color: #E4E6EF">กรุณาเลือก</span></option>
                     </select>
                 </div>
@@ -430,11 +430,8 @@
             <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 mt-2">
                 <div class="form-outline">
                     <label class="form-label lable_show" for="work_district">เขต/อำเภอ</label>
-                    <select class="form-select day_select work_district" aria-label="Default select example">
+                    <select class="form-select day_select work_district select2-single" id="work_district" aria-label="Default select example">
                         <option selected><span style="color: #E4E6EF">กรุณาเลือก</span></option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
                     </select>
                 </div>
             </div>
@@ -442,11 +439,8 @@
             <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 mt-2">
                 <div class="form-outline">
                     <label class="form-label lable_show" for="work_subdistrict">แขวง/ตำบล</label>
-                    <select class="form-select day_select work_subdistrict" aria-label="Default select example">
+                    <select class="form-select day_select work_subdistrict select2-single" id="work_subdistrict" aria-label="Default select example">
                         <option selected><span style="color: #E4E6EF">กรุณาเลือก</span></option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
                     </select>
                 </div>
             </div>
@@ -454,7 +448,10 @@
             <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 mt-2">
                 <div class="form-outline">
                     <label class="form-label lable_show" for="work_postcode">รหัสไปรษณีย์</label>
-                    <input type="text" id="work_postcode" class="form-control" />
+                    <div id="main_work_postcode">
+                        <input type="text" id="work_postcode" class="form-control" />
+                    </div>
+
                 </div>
             </div>
 
@@ -463,9 +460,9 @@
                 <div class="form-outline size_shirt">
                     <select class="form-select one-form-line marital_status" aria-label="Default select example">
                         <option selected style="color: #E4E6EF">กรุณาเลือก</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        <option value="single">โสด</option>
+                        <option value="married">สมรส</option>
+                        <option value="divorce">หย่าร้าง</option>
                     </select>
                 </div>
             </div>
@@ -816,7 +813,7 @@
             success: function(data) {
                 console.log(data.data)
                 $("#address_postcode").remove();
-                    $("#address_postcode_main").append(' <input type="text" id="address_postcode" class="form-control" value="" disabled />')
+                $("#address_postcode_main").append(' <input type="text" id="address_postcode" class="form-control" value="" disabled />')
                 $.each(data.data, function(index, value) {
                     $("#address_province").append("<option value='" + index + "'> " + value + "</option>");
                 });
@@ -872,7 +869,7 @@
                     console.log('subdistrict', data.data);
                     $("#address_subdistrict").text("");
                     $("#address_postcode").remove();
-                    $("#address_postcode_main").append(' <input type="text" id="address_postcode" class="form-control" value="" disabled />')
+                    $("#address_postcode_main").append('<input type="text" id="address_postcode" class="form-control" value="" disabled />')
                     $.each(data.data, function(index, value) {
 
                         $("#address_subdistrict").append("<option value='" + index + "'> " + value + "</option>");
@@ -901,6 +898,107 @@
                     console.log('zipcode', data.data[0]);
                     $("#address_postcode").remove();
                     $("#address_postcode_main").append(' <input type="text" id="address_postcode" class="form-control" value="' + data.data[0] + '" disabled />')
+                }
+            });
+
+        });
+
+        $.ajax({
+            url: "http://localhost/security-manage/api/Address/get_provinces",
+            dataType: "json",
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            data: {
+                show_province: 'show_province'
+            },
+            success: function(data) {
+                console.log(data.data)
+                $("#work_postcode").remove();
+                $("#main_work_postcode").append(' <input type="text" id="work_province" class="form-control" value="" disabled />')
+                $.each(data.data, function(index, value) {
+                    $("#work_province").append("<option value='" + index + "'> " + value + "</option>");
+                });
+            }
+        });
+
+        $("#work_province").change(function() {
+            var work_province_id = $(this).val();
+            console.log('province_id', work_province_id);
+            $.ajax({
+                url: "http://localhost/security-manage/api/Address/get_districts",
+                method: "POST",
+                dataType: "json",
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+                data: {
+                    address_province_id: work_province_id,
+                },
+                success: function(data) {
+                    console.log('district', data.data);
+                    $("#work_subdistrict").text("");
+                    $("#work_district").text("");
+                    $("#work_postcode").remove();
+                    $("#main_work_postcode").append(' <input type="text" id="work_postcode" class="form-control" value="" disabled />')
+                    $.each(data.data, function(index, value) {
+                        $("#work_district").append("<option value='" + index + "'> " + value + "</option>");
+                    });
+                }
+            });
+
+        });
+
+
+        $("#work_district").change(function() {
+            var work_district_id = $(this).val();
+            console.log('district_id', work_district_id);
+
+            $.ajax({
+                url: "http://localhost/security-manage/api/Address/get_sub_districts",
+                method: "POST",
+                dataType: "json",
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+                data: {
+                    address_district_id: work_district_id
+                },
+                success: function(data) {
+                    console.log('subdistrict', data.data);
+                    $("#work_subdistrict").text("");
+                    $("#work_postcode").remove();
+                    $("#main_work_postcode").append(' <input type="text" id="work_postcode" class="form-control" value="" disabled />')
+                    $.each(data.data, function(index, value) {
+
+                        $("#work_subdistrict").append("<option value='" + index + "'> " + value + "</option>");
+
+                    });
+                }
+            });
+
+        });
+        $("#work_subdistrict").change(function() {
+            var work_subdistrict = $('#work_subdistrict').val();
+            console.log('subdistrict', subdistrict);
+
+            $.ajax({
+                url: "http://localhost/security-manage/api/Address/get_zipcode",
+                method: "POST",
+                dataType: "json",
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+                data: {
+                    address_subdistrict_id: work_subdistrict
+                },
+                success: function(data) {
+                    console.log('zipcode', data.data[0]);
+                    $("#work_postcode").remove();
+                    $("#main_work_postcode").append(' <input type="text" id="work_postcode" class="form-control" value="' + data.data[0] + '" disabled />')
                 }
             });
 
