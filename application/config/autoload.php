@@ -252,7 +252,9 @@ $autoload['config'] = array(
 
     'custom_site_configuration',
 
-    'custom_system_configuration'
+    'custom_system_configuration',
+    
+    'custom_response_code_configuration',
 
 );
 
