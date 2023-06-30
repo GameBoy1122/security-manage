@@ -156,7 +156,7 @@ $db['default'] = array(
 
 	'username' => 'root',
 
-	'password' => '',
+	'password' => 'root',
 
 	'database' => 'admin',
 

@@ -203,6 +203,26 @@
                     </div>
                 </div>
             </div>
+            <div class="director col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                <div class="card card-custom bg-white border-white border-0 mb-3">
+                    <img class="director_picture" src="<?php echo base_url('/assets/img/section1_11.png'); ?>"
+                        alt="product">
+                    <div class="card-body" style="overflow-y: auto">
+                        <h4 class="card-title director_name">ศาสตราจารย์ ดร.สุชัชวีร์ สุวรรณสวัสดิ์</h4>
+                        <p class="card-text director_position">กรรมการ</p>
+                    </div>
+                </div>
+            </div>
+            <div class="director col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                <div class="card card-custom bg-white border-white border-0 mb-3">
+                    <img class="director_picture" src="<?php echo base_url('/assets/img/section1_12.png'); ?>"
+                        alt="product">
+                    <div class="card-body" style="overflow-y: auto">
+                        <h4 class="card-title director_name">ดร.สถิตย์  ลิ่มพงศ์พันธุ์</h4>
+                        <p class="card-text director_position">กรรมการ</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
