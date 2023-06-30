@@ -458,7 +458,7 @@
             <div class="form_topic" for="mariage_status">สถานภาพสมรส</div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3">
                 <div class="form-outline size_shirt">
-                    <select class="form-select one-form-line marital_status" aria-label="Default select example">
+                    <select class="form-select one-form-line marital_status" id="marital_status" aria-label="Default select example">
                         <option selected style="color: #E4E6EF">กรุณาเลือก</option>
                         <option value="single">โสด</option>
                         <option value="married">สมรส</option>
@@ -480,7 +480,7 @@
             <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 mt-2">
                 <div class="form-outline">
                     <label class="form-label lable_show" for="marital_day">วันเกิด</label>
-                    <select class="form-select day_select marital_day" aria-label="Default select example">
+                    <select class="form-select day_select marital_day" id="marital_day" aria-label="Default select example">
                         <option selected><span style="color: #E4E6EF">กรุณาเลือก</span></option>
                         <?PHP for ($i = 1; $i <= 31; $i++) { ?>
                             <option value="<?PHP echo $i ?>"><?PHP echo $i ?></option>
@@ -492,7 +492,7 @@
             <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 mt-2">
                 <div class="form-outline">
                     <label class="form-label lable_show" for="marital_month">เดือน</label>
-                    <select class="form-select day_select marital_month" aria-label="Default select example">
+                    <select class="form-select day_select marital_month" id="marital_month" aria-label="Default select example">
                         <option selected><span style="color: #E4E6EF">กรุณาเลือก</span></option>
                         <?PHP $month = array("มกราคม ", "กุมภาพันธ์ ", "มีนาคม ", "เมษายน ", "พฤษภาคม ", "มิถุนายน ", "กรกฎาคม ", "สิงหาคม ", "กันยายน ", "ตุลาคม ", "พฤศจิกายน ", "ธันวาคม "); ?>
                         <?PHP for ($i = 0; $i < sizeof($month); $i++) { ?>
@@ -506,7 +506,7 @@
             <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 mt-2">
                 <div class="form-outline">
                     <label class="form-label lable_show" for="mariage_birth_year">ปี</label>
-                    <select class="form-select day_select marital_year" aria-label="Default select example">
+                    <select class="form-select day_select marital_year" id="marital_year" aria-label="Default select example">
                         <option selected><span style="color: #E4E6EF">กรุณาเลือก</span></option>
                         <?PHP for ($i = 0; $i <= 70; $i++) { ?>
                             <option value="<?PHP echo date("Y") - $i + 543 ?>"><?PHP echo date("Y") - $i + 543 ?></option>
@@ -529,8 +529,8 @@
             </div>
             <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 mt-2">
                 <div class="form-outline">
-                    <label class="form-label lable_show" for="marital_nationality">ศาสนา</label>
-                    <input type="text" id="marital_nationality" class="form-control" />
+                    <label class="form-label lable_show" for="marital_religion">ศาสนา</label>
+                    <input type="text" id="marital_religion" class="form-control" />
                 </div>
             </div>
         </div>
@@ -1002,6 +1002,37 @@
                 }
             });
 
+        });
+        $("#marital_status").change(function() {
+            var marital_status = $(this).val();
+            if (marital_status == 'single') {
+                $("#mariage_name").prop("disabled", true);
+                $("#marital_job").prop("disabled", true);
+                $("#marital_day").prop("disabled", true);
+                $("#marital_month").prop("disabled", true);
+                $("#marital_year").prop("disabled", true);
+                $("#marital_ethnicity").prop("disabled", true);
+                $("#marital_nationality").prop("disabled", true);
+                $("#marital_religion").prop("disabled", true);
+            } else if (marital_status == 'married') {
+                $("#mariage_name").prop("disabled", false);
+                $("#marital_job").prop("disabled", false);
+                $("#marital_day").prop("disabled", false);
+                $("#marital_month").prop("disabled", false);
+                $("#marital_year").prop("disabled", false);
+                $("#marital_ethnicity").prop("disabled", false);
+                $("#marital_nationality").prop("disabled", false);
+                $("#marital_religion").prop("disabled", false);
+            } else if (marital_status == 'divorce') {
+                $("#mariage_name").prop("disabled", true);
+                $("#marital_job").prop("disabled", true);
+                $("#marital_day").prop("disabled", true);
+                $("#marital_month").prop("disabled", true);
+                $("#marital_year").prop("disabled", true);
+                $("#marital_ethnicity").prop("disabled", true);
+                $("#marital_nationality").prop("disabled", true);
+                $("#marital_religion").prop("disabled", true);
+            }
         });
 
     });
