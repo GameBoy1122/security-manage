@@ -73,12 +73,51 @@
     }
 
 
+    .select2-container .select2-selection--single .select2-selection__rendered {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: 26px;
+        font-size: 13px;
+        width: 100%;
+        padding: 0.375rem 0.75rem !important;
+        /* height: 40px; */
+    }
+
+    .select2-container .select2-selection--single {
+        box-sizing: border-box;
+        cursor: pointer;
+        display: block;
+        user-select: none;
+        -webkit-user-select: none;
+        height: 38px;
+        border: var(--bs-border-width) solid var(--bs-border-color);
+        border-radius: var(--bs-border-radius);
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+        height: 40px;
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        width: 20px;
+    }
+
     @media only screen and (max-width: 900px) {
         .day_select {
             line-height: 26px;
             font-size: 11px;
             width: 100%;
 
+        }
+
+        .select2-single {
+            line-height: 26px;
+            font-size: 13px;
+            width: 100%;
+            padding: 0.375rem 0.75rem !important;
+            height: 40px;
         }
     }
 
@@ -284,11 +323,8 @@
             <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 mt-2">
                 <div class="form-outline">
                     <label class="form-label lable_show" for="address_province">จังหวัด</label>
-                    <select class="form-select day_select address_province" aria-label="Default select example">
+                    <select class="form-select day_select select2-single address_province" id="address_province" aria-label="Default select example">
                         <option selected><span style="color: #E4E6EF">กรุณาเลือก</span></option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
                     </select>
                 </div>
             </div>
@@ -296,11 +332,8 @@
             <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 mt-2">
                 <div class="form-outline">
                     <label class="form-label lable_show" for="address_district">เขต/อำเภอ</label>
-                    <select class="form-select day_selec address_district" aria-label="Default select example">
+                    <select class="form-select day_selec address_district select2-single" id="address_district" aria-label="Default select example">
                         <option selected><span style="color: #E4E6EF">กรุณาเลือก</span></option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
                     </select>
                 </div>
             </div>
@@ -308,11 +341,8 @@
             <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 mt-2">
                 <div class="form-outline">
                     <label class="form-label lable_show" for="address_subdistrict">ตำบล</label>
-                    <select class="form-select day_select address_subdistrict" aria-label="Default select example">
+                    <select class="form-select day_select address_subdistrict select2-single" id="address_subdistrict" aria-label="Default select example">
                         <option selected><span style="color: #E4E6EF">กรุณาเลือก</span></option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
                     </select>
                 </div>
             </div>
@@ -320,7 +350,7 @@
             <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 mt-2">
                 <div class="form-outline">
                     <label class="form-label lable_show" for="address_postcode">รหัสไปรษณีย์</label>
-                    <input type="text" id="address_postcode" class="form-control" />
+                    <div id="address_postcode_main"><input type="text" id="address_postcode" class="form-control" /></div>
                 </div>
             </div>
 
@@ -393,9 +423,6 @@
                     <label class="form-label lable_show" for="work_province">จังหวัด</label>
                     <select class="form-select day_select work_province" aria-label="Default select example">
                         <option selected><span style="color: #E4E6EF">กรุณาเลือก</span></option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
                     </select>
                 </div>
             </div>
@@ -771,3 +798,113 @@
         <button type="submit" id="submit" class="btn btn_click btn-block mb-4 pt-2 pb-2 ps-5 pe-5">ลงทะเบียน</button>
     </div>
 </section>
+
+<script>
+    var id_token = $("#id_token").val();
+    $(function() {
+
+        $(".select2-single").select2();
+        $.ajax({
+            url: "http://localhost/security-manage/api/Address/get_provinces",
+            dataType: "json",
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            data: {
+                show_province: 'show_province'
+            },
+            success: function(data) {
+                console.log(data.data)
+                $("#address_postcode").remove();
+                    $("#address_postcode_main").append(' <input type="text" id="address_postcode" class="form-control" value="" disabled />')
+                $.each(data.data, function(index, value) {
+                    $("#address_province").append("<option value='" + index + "'> " + value + "</option>");
+                });
+            }
+        });
+
+        $("#address_province").change(function() {
+            var province_id = $(this).val();
+            console.log('province_id', province_id);
+            $.ajax({
+                url: "http://localhost/security-manage/api/Address/get_districts",
+                method: "POST",
+                dataType: "json",
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+                data: {
+                    address_province_id: province_id,
+                },
+                success: function(data) {
+                    console.log('district', data.data);
+                    $("#address_subdistrict").text("");
+                    $("#address_district").text("");
+                    $("#address_postcode").remove();
+                    $("#address_postcode_main").append(' <input type="text" id="address_postcode" class="form-control" value="" disabled />')
+                    $.each(data.data, function(index, value) {
+
+                        $("#address_district").append("<option value='" + index + "'> " + value + "</option>");
+                    });
+                }
+            });
+
+        });
+
+
+        $("#address_district").change(function() {
+            var district_id = $(this).val();
+            console.log('district_id', district_id);
+
+            $.ajax({
+                url: "http://localhost/security-manage/api/Address/get_sub_districts",
+                method: "POST",
+                dataType: "json",
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+                data: {
+                    address_district_id: district_id
+                },
+                success: function(data) {
+                    console.log('subdistrict', data.data);
+                    $("#address_subdistrict").text("");
+                    $("#address_postcode").remove();
+                    $("#address_postcode_main").append(' <input type="text" id="address_postcode" class="form-control" value="" disabled />')
+                    $.each(data.data, function(index, value) {
+
+                        $("#address_subdistrict").append("<option value='" + index + "'> " + value + "</option>");
+
+                    });
+                }
+            });
+
+        });
+        $("#address_subdistrict").change(function() {
+            var subdistrict = $('#address_subdistrict').val();
+            console.log('subdistrict', subdistrict);
+
+            $.ajax({
+                url: "http://localhost/security-manage/api/Address/get_zipcode",
+                method: "POST",
+                dataType: "json",
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+                data: {
+                    address_subdistrict_id: subdistrict
+                },
+                success: function(data) {
+                    console.log('zipcode', data.data[0]);
+                    $("#address_postcode").remove();
+                    $("#address_postcode_main").append(' <input type="text" id="address_postcode" class="form-control" value="' + data.data[0] + '" disabled />')
+                }
+            });
+
+        });
+
+    });
+</script>
