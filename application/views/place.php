@@ -59,7 +59,7 @@
                             <div class="btn icon m-0"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i></div>
                         </div>
                         <div class="col-auto  pt-2">
-                            เลขที่ 144/4 หมู่ที่ 4 ต.บางรักพัฒนา อ.บางบัวทอง จ.นนทบุรี 11110
+                            ศูนย์ประชุมวายุภักษ์ ศูนย์ราชการเฉลิมพระเกียรดิฯ หลักสี่ กรุงเทพมหานคร 10210
                         </div>
                     </div>
                 </div>
@@ -101,6 +101,6 @@
 
     <section>
         <div class="row mt-4">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242.08763159641606!2d100.42746758843457!3d13.8748884722322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e291278e757a1f%3A0x42fa80fd3343e6d2!2z4Lih4Li54Lil4LiZ4Li04LiY4Li04LiB4Liy4Lij4LiI4Lix4LiU4LiB4Liy4Lij4LiU4LmJ4Liy4LiZ4LiE4Lin4Liy4Lih4Lih4Lix4LmI4LiZ4LiE4LiH!5e0!3m2!1sth!2sth!4v1687764134270!5m2!1sth!2sth" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3873.2526907722504!2d100.56566670000001!3d13.8838333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDUzJzAxLjgiTiAxMDDCsDMzJzU2LjQiRQ!5e0!3m2!1sth!2sth!4v1688115700976!5m2!1sth!2sth" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
