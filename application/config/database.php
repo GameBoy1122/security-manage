@@ -201,7 +201,7 @@ $db['master_query'] = array(
 
 	'username' => 'root',
 
-	'password' => 'root',
+	'password' => '',
 
 	'database' => 'admin',
 
@@ -245,7 +245,7 @@ $db['master_report'] = array(
 
 	'username' => 'root',
 
-	'password' => 'root',
+	'password' => '',
 
 	'database' => 'admin',
 
@@ -289,7 +289,7 @@ $db['master_modify'] = array(
 
 	'username' => 'root',
 
-	'password' => 'root',
+	'password' => '',
 
 	'database' => 'admin',
 
