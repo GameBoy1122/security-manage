@@ -27,9 +27,9 @@ class Enroll extends CI_Controller
 			for ($i = 0; $i < $count; $i++) {
 				if ($files['error'][$i] == UPLOAD_ERR_OK) {
 					$filename = uniqid() . '_' . $files['name'][$i];
-					$filepath = 'assets/upload/file_idcard/' . $filename;
+					$filepath = 'assets/uploads/file_idcard/' . $filename;
 					if (move_uploaded_file($files['tmp_name'][$i], $filepath)) {
-						$file_idcard[] = base_url('') . $filepath;
+						$file_idcard[] = $filepath;
 					}
 				}
 			}
@@ -43,9 +43,9 @@ class Enroll extends CI_Controller
 			for ($i = 0; $i < $count; $i++) {
 				if ($files['error'][$i] == UPLOAD_ERR_OK) {
 					$filename = uniqid() . '_' . $files['name'][$i];
-					$filepath = 'assets/upload/file_house_registration/' . $filename;
+					$filepath = 'assets/uploads/file_house_registration/' . $filename;
 					if (move_uploaded_file($files['tmp_name'][$i], $filepath)) {
-						$file_house_registration[] = base_url('') . $filepath;
+						$file_house_registration[] =  $filepath;
 					}
 				}
 			}
@@ -59,9 +59,9 @@ class Enroll extends CI_Controller
 			for ($i = 0; $i < $count; $i++) {
 				if ($files['error'][$i] == UPLOAD_ERR_OK) {
 					$filename = uniqid() . '_' . $files['name'][$i];
-					$filepath = 'assets/upload/file_photo/' . $filename;
+					$filepath = 'assets/uploads/file_photo/' . $filename;
 					if (move_uploaded_file($files['tmp_name'][$i], $filepath)) {
-						$file_photo[] = base_url('') . $filepath;
+						$file_photo[] =  $filepath;
 					}
 				}
 			}
@@ -75,9 +75,9 @@ class Enroll extends CI_Controller
 			for ($i = 0; $i < $count; $i++) {
 				if ($files['error'][$i] == UPLOAD_ERR_OK) {
 					$filename = uniqid() . '_' . $files['name'][$i];
-					$filepath = 'assets/upload/file_certificate/' . $filename;
+					$filepath = 'assets/uploads/file_certificate/' . $filename;
 					if (move_uploaded_file($files['tmp_name'][$i], $filepath)) {
-						$file_certificate[] = base_url('') . $filepath;
+						$file_certificate[] = $filepath;
 					}
 				}
 			}

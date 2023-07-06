@@ -539,19 +539,19 @@ $configurations = array(
 
                     },
 
-                    {
+                    // {
 
-                        field: 'description',
+                    //     field: 'description',
 
-                        title: 'DESCRIPTION',
+                    //     title: 'DESCRIPTION',
 
 
 
-                        autoHide: false,
+                    //     autoHide: false,
 
-                        textAlign: 'center',
+                    //     textAlign: 'center',
 
-                    },
+                    // },
 
                     {
 
