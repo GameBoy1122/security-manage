@@ -56,6 +56,9 @@ class Genpdf extends CI_Controller
         ]);
 
         $user = $this->user_model->getUser($id);
+        // echo '<pre>';
+        // print_r($user);
+        // exit();
         $html = $this->load->view('pdf', array('user' => $user), true);
         $mpdf->WriteHTML($html);
         $mpdf->Output();
