@@ -100,8 +100,8 @@
       <td colspan="2">ขนาดเสื้อยืดโปโล : <?php echo $user->shirt_select ?></td>
     </tr>
     <tr>
-      <td colspan="1" style="width: 25%;">วัน/เดือน/ปีเกิด </td>
-      <td colspan="3"><?php echo $user->birthday_day ?>/<?php echo $user->birthday_month ?>/<?php echo $user->birthday_year ?> </td>
+      <td colspan="1" style="width: 25%;">วัน เดือน ปีเกิด</td>
+      <td colspan="3"><?php echo $user->birthday_day ?> <?php echo $user->birthday_month ?> <?php echo $user->birthday_year ?> </td>
     </tr>
     <tr>
       <td colspan="1" style="width: 25%;"></td>
@@ -121,12 +121,12 @@
     </tr>
     <tr>
       <td colspan="1" style="width: 25%;"></td>
-      <td colspan="1">แขวง/ตำล <?php echo $user->address_province ?></td>
-      <td colspan="2">เขต/อำเภอ <?php echo $user->address_district ?></td>
+      <td colspan="1">แขวง/ตำล <?php echo $sub_districts_user->sub_districts ?></td>
+      <td colspan="2">เขต/อำเภอ <?php echo $districts_user->districts ?></td>
     </tr>
     <tr>
       <td colspan="1" style="width: 25%;"></td>
-      <td colspan="1">จังหวัด <?php echo $user->address_subdistrict ?></td>
+      <td colspan="1">จังหวัด <?php echo $provinces_user->provinces ?></td>
       <td colspan="2">รหัสไปรษณีย์ <?php echo $user->address_postcode ?></td>
     </tr>
     <tr>
@@ -145,12 +145,12 @@
     </tr>
     <tr>
       <td colspan="1" style="width: 25%;"></td>
-      <td colspan="1">แขวง/ตำล <?php echo $user->work_province ?></td>
-      <td colspan="2">เขต/อำเภอ <?php echo $user->work_district ?></td>
+      <td colspan="1">แขวง/ตำล <?php echo  $sub_districts_work->sub_districts ?></td>
+      <td colspan="2">เขต/อำเภอ <?php echo $districts_work->districts ?></td>
     </tr>
     <tr>
       <td colspan="1" style="width: 25%;"></td>
-      <td colspan="1">จังหวัด <?php echo $user->work_subdistrict ?></td>
+      <td colspan="1">จังหวัด <?php echo $provinces_work->provinces ?></td>
       <td colspan="2">รหัสไปรษณีย์ <?php echo $user->work_postcode ?></td>
     </tr>
     <tr>
@@ -166,10 +166,10 @@
       <td colspan="3"><?php echo $user->marital_job ?></td>
     </tr>
     <tr>
-      <td colspan="1" style="width: 25%;">วัน/เดือน/ปีเกิด </td>
+      <td colspan="1" style="width: 25%;">วัน เดือน ปีเกิด </td>
       <td colspan="3">
         <?php if (!empty($user->marital_day)) { ?>
-          <?php echo $user->marital_day ?>/<?php echo $user->marital_month ?>/<?php echo $user->marital_year ?>
+          <?php echo $user->marital_day ?> <?php echo $user->marital_month ?> <?php echo $user->marital_year ?>
         <?php } ?>
       </td>
     </tr>
