@@ -39,6 +39,10 @@
         color: #878787;
 
     }
+
+    a {
+        text-decoration: none;
+    }
 </style>
 
 <section class="head" style=" position: relative;">
@@ -50,127 +54,19 @@
 <section class="content">
     <div class="container">
         <div class="row">
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col-6 col-sm-6 col-lg-4 col-xl-4">
-                    <div class="card card-custom bg-white border-white border-0 mb-3">
-                        <img class="lecturer_picture" src="<?php echo base_url('/assets/img/news.png'); ?>"
-                            alt="lecturer">
-
-                        <div class="card-body" style="overflow-y: auto">
-                            <div class="date"><i class="calendar_icon fa-solid fa-calendar-days"></i> &nbsp; 21/06/2566</div>
-                            <p class="news_content">แถลงข่าวบันทึกข้อตกลงมูลนิธิการจัดการเพื่อ
-                                ความมั่นคงและสถานีโทรทัศน์กองทัพบกช่อง 5 เพื่อจัดทำรายการ THE BEST Forever</p>
+            <?php foreach ($news as $key => $news_list) { ?>
+                <div class="col-6 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <a href="<?php echo base_url('news/details/') . $news_list->news_id ?>">
+                        <div class="card card-custom bg-white border-white border-0 mb-3">
+                            <img class="lecturer_picture" src="<?php echo base_url('') . $news_list->image; ?>" alt="lecturer">
+                            <div class="card-body" style="overflow-y: auto">
+                                <div class="date"><i class="calendar_icon fa-solid fa-calendar-days"></i> &nbsp; <?php echo $news_list->created_date ?></div>
+                                <p class="news_content "><?php echo $news_list->title ?></p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-
-                <div class="col-6 col-sm-6 col-lg-4 col-xl-4">
-                    <div class="card card-custom bg-white border-white border-0 mb-3">
-                        <img class="lecturer_picture" src="<?php echo base_url('/assets/img/news.png'); ?>"
-                            alt="lecturer">
-
-                        <div class="card-body" style="overflow-y: auto">
-                            <div class="date"><i class="calendar_icon fa-solid fa-calendar-days"></i> &nbsp; 21/06/2566</div>
-                            <p class="news_content">แถลงข่าวบันทึกข้อตกลงมูลนิธิการจัดการเพื่อ
-                                ความมั่นคงและสถานีโทรทัศน์กองทัพบกช่อง 5 เพื่อจัดทำรายการ THE BEST Forever</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-6 col-sm-6 col-lg-4 col-xl-4">
-                    <div class="card card-custom bg-white border-white border-0 mb-3">
-                        <img class="lecturer_picture" src="<?php echo base_url('/assets/img/news.png'); ?>"
-                            alt="lecturer">
-
-                        <div class="card-body" style="overflow-y: auto">
-                            <div class="date"><i class="calendar_icon fa-solid fa-calendar-days"></i> &nbsp; 21/06/2566</div>
-                            <p class="news_content">แถลงข่าวบันทึกข้อตกลงมูลนิธิการจัดการเพื่อ
-                                ความมั่นคงและสถานีโทรทัศน์กองทัพบกช่อง 5 เพื่อจัดทำรายการ THE BEST Forever</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-6 col-sm-6 col-lg-4 col-xl-4">
-                    <div class="card card-custom bg-white border-white border-0 mb-3">
-                        <img class="lecturer_picture" src="<?php echo base_url('/assets/img/news.png'); ?>"
-                            alt="lecturer">
-
-                        <div class="card-body" style="overflow-y: auto">
-                            <div class="date"><i class="calendar_icon fa-solid fa-calendar-days"></i> &nbsp; 21/06/2566</div>
-                            <p class="news_content">แถลงข่าวบันทึกข้อตกลงมูลนิธิการจัดการเพื่อ
-                                ความมั่นคงและสถานีโทรทัศน์กองทัพบกช่อง 5 เพื่อจัดทำรายการ THE BEST Forever</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-6 col-sm-6 col-lg-4 col-xl-4">
-                    <div class="card card-custom bg-white border-white border-0 mb-3">
-                        <img class="lecturer_picture" src="<?php echo base_url('/assets/img/news.png'); ?>"
-                            alt="lecturer">
-
-                        <div class="card-body" style="overflow-y: auto">
-                            <div class="date"><i class="calendar_icon fa-solid fa-calendar-days"></i> &nbsp; 21/06/2566</div>
-                            <p class="news_content">แถลงข่าวบันทึกข้อตกลงมูลนิธิการจัดการเพื่อ
-                                ความมั่นคงและสถานีโทรทัศน์กองทัพบกช่อง 5 เพื่อจัดทำรายการ THE BEST Forever</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-6 col-sm-6 col-lg-4 col-xl-4">
-                    <div class="card card-custom bg-white border-white border-0 mb-3">
-                        <img class="lecturer_picture" src="<?php echo base_url('/assets/img/news.png'); ?>"
-                            alt="lecturer">
-
-                        <div class="card-body" style="overflow-y: auto">
-                            <div class="date"><i class="calendar_icon fa-solid fa-calendar-days"></i> &nbsp; 21/06/2566</div>
-                            <p class="news_content">แถลงข่าวบันทึกข้อตกลงมูลนิธิการจัดการเพื่อ
-                                ความมั่นคงและสถานีโทรทัศน์กองทัพบกช่อง 5 เพื่อจัดทำรายการ THE BEST Forever</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-6 col-sm-6 col-lg-4 col-xl-4">
-                    <div class="card card-custom bg-white border-white border-0 mb-3">
-                        <img class="lecturer_picture" src="<?php echo base_url('/assets/img/news.png'); ?>"
-                            alt="lecturer">
-
-                        <div class="card-body" style="overflow-y: auto">
-                            <div class="date"><i class="calendar_icon fa-solid fa-calendar-days"></i> &nbsp; 21/06/2566</div>
-                            <p class="news_content">แถลงข่าวบันทึกข้อตกลงมูลนิธิการจัดการเพื่อ
-                                ความมั่นคงและสถานีโทรทัศน์กองทัพบกช่อง 5 เพื่อจัดทำรายการ THE BEST Forever</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-6 col-sm-6 col-lg-4 col-xl-4">
-                    <div class="card card-custom bg-white border-white border-0 mb-3">
-                        <img class="lecturer_picture" src="<?php echo base_url('/assets/img/news.png'); ?>"
-                            alt="lecturer">
-
-                        <div class="card-body" style="overflow-y: auto">
-                            <div class="date"><i class="calendar_icon fa-solid fa-calendar-days"></i> &nbsp; 21/06/2566</div>
-                            <p class="news_content">แถลงข่าวบันทึกข้อตกลงมูลนิธิการจัดการเพื่อ
-                                ความมั่นคงและสถานีโทรทัศน์กองทัพบกช่อง 5 เพื่อจัดทำรายการ THE BEST Forever</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-6 col-sm-6 col-lg-4 col-xl-4">
-                    <div class="card card-custom bg-white border-white border-0 mb-3">
-                        <img class="lecturer_picture" src="<?php echo base_url('/assets/img/news.png'); ?>"
-                            alt="lecturer">
-
-                        <div class="card-body" style="overflow-y: auto">
-                            <div class="date"><i class="calendar_icon fa-solid fa-calendar-days"></i> &nbsp; 21/06/2566</div>
-                            <p class="news_content">แถลงข่าวบันทึกข้อตกลงมูลนิธิการจัดการเพื่อ
-                                ความมั่นคงและสถานีโทรทัศน์กองทัพบกช่อง 5 เพื่อจัดทำรายการ THE BEST Forever</p>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
+            <?php } ?>
         </div>
     </div>
 </section>

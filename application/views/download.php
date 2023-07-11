@@ -56,28 +56,9 @@
 
 
                 <div class="col-12 ">
-                    <button class="btn file text-truncate mb-3"><img class="ps-2 pe-3" src="<?php echo base_url('assets/img/filepic.png') ?>">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</button>
+                    <a href="<?php echo base_url('/assets/uploads/File/Mind_Map_มส.15.pdf') ?>" download><button class="btn file text-truncate mb-3"><img class="ps-2 pe-3" src="<?php echo base_url('assets/img/filepic.png') ?>">Mind Map มส.15</button></a>
                 </div>
 
-                <div class="col-12 ">
-                    <button class="btn file text-truncate mb-3"><img class="ps-2 pe-3" src="<?php echo base_url('assets/img/filepic.png') ?>">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</button>
-                </div>
-
-                <div class="col-12 ">
-                    <button class="btn file text-truncate mb-3"><img class="ps-2 pe-3" src="<?php echo base_url('assets/img/filepic.png') ?>">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</button>
-                </div>
-
-                <div class="col-12 ">
-                    <button class="btn file text-truncate mb-3"><img class="ps-2 pe-3" src="<?php echo base_url('assets/img/filepic.png') ?>">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</button>
-                </div>
-
-                <div class="col-12 ">
-                    <button class="btn file text-truncate mb-3"><img class="ps-2 pe-3" src="<?php echo base_url('assets/img/filepic.png') ?>">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</button>
-                </div>
-
-                <div class="col-12 ">
-                    <button class="btn file text-truncate mb-3"><img class="ps-2 pe-3" src="<?php echo base_url('assets/img/filepic.png') ?>">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</button>
-                </div>
 
             </div>
         </div>
