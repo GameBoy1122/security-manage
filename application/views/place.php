@@ -47,8 +47,12 @@
     <section>
 
         <div class="row ms-5 ps-5">
-            <div class="col-auto">
+            <div class="col-12">
                 <h3 style="color: #1B3D84; font-weight: bold;">สถานที่อบรม</h3>
+            </div>
+
+            <div class="col-12">
+                <h3 style="color: #1B3D84; font-weight: bold;">อาคารทรงกลม โรงแรมเซ็นทรา ศูนย์ราชการ แจ้งวัฒนะ</h3>
             </div>
 
             <div class="row mt-5">
@@ -59,38 +63,13 @@
                             <div class="btn icon m-0"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i></div>
                         </div>
                         <div class="col-auto  pt-2">
-                            เลขที่ 144/4 หมู่ที่ 4 ต.บางรักพัฒนา อ.บางบัวทอง จ.นนทบุรี 11110
+                            ศูนย์ประชุมวายุภักษ์ ศูนย์ราชการเฉลิมพระเกียรดิฯ หลักสี่ กรุงเทพมหานคร 10210
                         </div>
                     </div>
                 </div>
 
-                <div class="col-12 mb-4">
-                    <div class="row">
-                        <div class="col-auto">
-                            <div class="btn icon m-0"><i class="fa-solid fa-phone" style="color: #ffffff;"></i></div>
-                        </div>
-                        <div class="col-auto mt-2">
-                            0 2926 6767, 0 2926 6895
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 mb-4">
-                    <div class="row">
-                        <div class="col-auto">
-                            <div class="btn icon m-0"><i class="fa-solid fa-envelope" style="color: #ffffff;"></i></div>
-                        </div>
-                        <div class="col-auto mt-2">
-                            ndcat_asmp@hotmail.com
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12">
-                    <i class="fa-brands fa-facebook b" style="color: #3B5998; font-size: 30px;"></i>
-                    <i class="fa-brands fa-line" style="color: #00CA5F; font-size: 30px; margin-left: 20px;"></i>
-
-                </div>
+                
+               
 
 
             </div>
