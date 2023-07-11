@@ -56,62 +56,37 @@ class Genpdf extends CI_Controller
         ]);
 
         $user = $this->user_model->getUser($id);
-        if (!empty($user->address_province)) {
-            $this->db->select('provinces.name_th as provinces,');
-            $this->db->where('provinces.id', $user->address_province);
-            $provinces_user = $this->db->get('provinces')->row();
-        } else {
-            $provinces_user = null;
-        }
+        $this->db->select('provinces.name_th as provinces,');
+        $this->db->where('provinces.id', $user->address_province);
+        $provinces_user = $this->db->get('provinces')->row();
 
-        if (!empty($user->address_province)) {
-            $this->db->select('provinces.name_th as provinces,');
-            $this->db->where('provinces.id', $user->address_province);
-            $provinces_work = $this->db->get('provinces')->row();
-        } else {
-            $provinces_work = null;
-        }
+        $this->db->select('provinces.name_th as provinces,');
+        $this->db->where('provinces.id', $user->address_province);
+        $provinces_work = $this->db->get('provinces')->row();
 
-        if (!empty($user->address_province)) {
-            $this->db->select('districts.name_th as districts,');
-            $this->db->where('districts.id', $user->address_district);
-            $districts_user = $this->db->get('districts')->row();
-        } else {
-            $districts_user = null;
-        }
+        $this->db->select('districts.name_th as districts,');
+        $this->db->where('districts.id', $user->address_district);
+        $districts_user = $this->db->get('districts')->row();
 
-        if (!empty($user->address_province)) {
-            $this->db->select('districts.name_th as districts,');
-            $this->db->where('districts.id', $user->work_district);
-            $districts_work = $this->db->get('districts')->row();
-        } else {
-            $districts_work = null;
-        }
+        $this->db->select('districts.name_th as districts,');
+        $this->db->where('districts.id', $user->work_district);
+        $districts_work = $this->db->get('districts')->row();
 
-        if (!empty($user->address_province)) {
-            $this->db->select('sub_districts.name_th as sub_districts,');
-            $this->db->where('sub_districts.id', $user->address_subdistrict);
-            $sub_districts_user = $this->db->get('sub_districts')->row();
-        } else {
-            $sub_districts_user = null;
-        }
+        $this->db->select('sub_districts.name_th as sub_districts,');
+        $this->db->where('sub_districts.id', $user->address_subdistrict);
+        $sub_districts_user = $this->db->get('sub_districts')->row();
 
-        if (!empty($user->address_province)) {
-            $this->db->select('sub_districts.name_th as sub_districts,');
-            $this->db->where('sub_districts.id', $user->address_subdistrict);
-            $sub_districts_work = $this->db->get('sub_districts')->row();
-        } else {
-            $sub_districts_work = null;
-        }
-        
+        $this->db->select('sub_districts.name_th as sub_districts,');
+        $this->db->where('sub_districts.id', $user->address_subdistrict);
+        $sub_districts_work = $this->db->get('sub_districts')->row();
+
         // $html = $this->load->view('pdf', compact('user', 'provinces_user', 'districts_user', 'sub_districts_user'));
 
         $html = $this->load->view('pdf', array('user' => $user, 'provinces_user' => $provinces_user, 'districts_user' => $districts_user, 'sub_districts_user' => $sub_districts_user, 'provinces_work' => $provinces_work, 'districts_work' => $districts_work, 'sub_districts_work' => $sub_districts_work), true);
         $name_th = $user->name_th;
         $mpdf->WriteHTML($html);
-        $mpdf->Output('');
-        // $mpdf->Output('ใบสมัคร' . $name_th . '.pdf', 'D');
-
+        // $mpdf->Output('');
+        $mpdf->Output('ใบสมัคร_' .  $user->name_th . '.pdf', 'D');
     }
 
     public function zip()

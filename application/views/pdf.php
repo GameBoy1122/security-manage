@@ -121,12 +121,30 @@
     </tr>
     <tr>
       <td colspan="1" style="width: 25%;"></td>
-      <td colspan="1">แขวง/ตำล <?php echo $sub_districts_user->sub_districts ?></td>
-      <td colspan="2">เขต/อำเภอ <?php echo $districts_user->districts ?></td>
+      <td colspan="1">แขวง/ตำล
+        <?php
+        if (isset($sub_districts_user)) {
+          echo $sub_districts_user->sub_districts;
+        }
+        ?>
+      </td>
+      <td colspan="2">เขต/อำเภอ
+        <?php
+        if (isset($districts_user)) {
+          echo $districts_user->districts;
+        }
+        ?>
+      </td>
     </tr>
     <tr>
       <td colspan="1" style="width: 25%;"></td>
-      <td colspan="1">จังหวัด <?php echo $provinces_user->provinces ?></td>
+      <td colspan="1">จังหวัด
+        <?php
+        if (isset($provinces_user)) {
+          echo $provinces_user->provinces;
+        }
+        ?>
+      </td>
       <td colspan="2">รหัสไปรษณีย์ <?php echo $user->address_postcode ?></td>
     </tr>
     <tr>
@@ -145,12 +163,32 @@
     </tr>
     <tr>
       <td colspan="1" style="width: 25%;"></td>
-      <td colspan="1">แขวง/ตำล <?php echo  $sub_districts_work->sub_districts ?></td>
-      <td colspan="2">เขต/อำเภอ <?php echo $districts_work->districts ?></td>
+      <td colspan="1">แขวง/ตำล
+        <?php
+        if (isset($sub_districts_work)) {
+          echo $sub_districts_work->sub_districts;
+        }
+        ?>
+
+      </td>
+      <td colspan="2">เขต/อำเภอ
+        <?php
+        if (isset($districts_work)) {
+          echo $districts_work->districts;
+        }
+        ?>
+
+      </td>
     </tr>
     <tr>
       <td colspan="1" style="width: 25%;"></td>
-      <td colspan="1">จังหวัด <?php echo $provinces_work->provinces ?></td>
+      <td colspan="1">จังหวัด
+        <?php
+        if (isset($provinces_work)) {
+          echo $provinces_work->provinces;
+        }
+        ?>
+      </td>
       <td colspan="2">รหัสไปรษณีย์ <?php echo $user->work_postcode ?></td>
     </tr>
     <tr>
