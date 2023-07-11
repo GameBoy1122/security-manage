@@ -93,6 +93,16 @@
 			border-top: 10px solid transparent;
 			border-bottom: 10px solid transparent;
 		}
+
+		.slide_detail a {
+			text-decoration: none;
+		}
+
+		.text-truncate {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
 	</style>
 	<section id="banner">
 		<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -103,14 +113,15 @@
 			</div>
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<img src="<?php echo base_url('assets/img/banner.png') ?>" class="d-block w-100" alt="...">
+					<img src="<?php echo base_url('assets/img/banner3.png') ?>" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item ">
+					<img src="<?php echo base_url('assets/img/banner1.png') ?>" class="d-block w-100" alt="...">
 				</div>
 				<div class="carousel-item">
-					<img src="<?php echo base_url('assets/img/banner.png') ?>" class="d-block w-100" alt="...">
+					<img src="<?php echo base_url('assets/img/banner2.png') ?>" class="d-block w-100" alt="...">
 				</div>
-				<div class="carousel-item">
-					<img src="<?php echo base_url('assets/img/banner.png') ?>" class="d-block w-100" alt="...">
-				</div>
+
 			</div>
 			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -177,81 +188,24 @@
 
 
 			<div class="slide_detail">
-				<div class="col-12 p-3">
-					<div class="card card-custom bg-white border-white border-0 mb-3 p-2">
-						<img class="lecturer_picture" src="<?php echo base_url('/assets/img/news.png'); ?>" alt="lecturer">
+				<?php foreach ($news as $key => $news_list) { ?>
+					<a href="<?php echo base_url('news/details/') . $news_list->news_id ?>">
+						<div class="col-12 p-3">
+							<div class="card card-custom bg-white border-white border-0 mb-3 p-2">
+								<img class="lecturer_picture" src="<?php echo base_url('') . $news_list->image; ?>" alt="lecturer">
 
-						<div class="card-body" style="overflow-y: auto">
-							<div class="date"><i class="calendar_icon fa-solid fa-calendar-days"></i> &nbsp; 21/06/2566</div>
-							<p class="news_content">แถลงข่าวบันทึกข้อตกลงมูลนิธิการจัดการเพื่อ
-								ความมั่นคงและสถานีโทรทัศน์กองทัพบกช่อง 5 เพื่อจัดทำรายการ THE BEST Forever</p>
+								<div class="card-body" style="overflow-y: auto">
+									<div class="date"><i class="calendar_icon fa-solid fa-calendar-days"></i> &nbsp; <?php echo $news_list->created_date ?></div>
+									<p class="news_content "><?php echo $news_list->title ?></p>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-
-				<div class="col-12 p-3">
-					<div class="card card-custom bg-white border-white border-0 mb-3 p-2">
-						<img class="lecturer_picture" src="<?php echo base_url('/assets/img/news.png'); ?>" alt="lecturer">
-
-						<div class="card-body" style="overflow-y: auto">
-							<div class="date"><i class="calendar_icon fa-solid fa-calendar-days"></i> &nbsp; 21/06/2566</div>
-							<p class="news_content">แถลงข่าวบันทึกข้อตกลงมูลนิธิการจัดการเพื่อ
-								ความมั่นคงและสถานีโทรทัศน์กองทัพบกช่อง 5 เพื่อจัดทำรายการ THE BEST Forever</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-12 p-3">
-					<div class="card card-custom bg-white border-white border-0 mb-3 p-2">
-						<img class="lecturer_picture" src="<?php echo base_url('/assets/img/news.png'); ?>" alt="lecturer">
-
-						<div class="card-body" style="overflow-y: auto">
-							<div class="date"><i class="calendar_icon fa-solid fa-calendar-days"></i> &nbsp; 21/06/2566</div>
-							<p class="news_content">แถลงข่าวบันทึกข้อตกลงมูลนิธิการจัดการเพื่อ
-								ความมั่นคงและสถานีโทรทัศน์กองทัพบกช่อง 5 เพื่อจัดทำรายการ THE BEST Forever</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-12 p-3">
-					<div class="card card-custom bg-white border-white border-0 mb-3 p-2">
-						<img class="lecturer_picture" src="<?php echo base_url('/assets/img/news.png'); ?>" alt="lecturer">
-
-						<div class="card-body" style="overflow-y: auto">
-							<div class="date"><i class="calendar_icon fa-solid fa-calendar-days"></i> &nbsp; 21/06/2566</div>
-							<p class="news_content">แถลงข่าวบันทึกข้อตกลงมูลนิธิการจัดการเพื่อ
-								ความมั่นคงและสถานีโทรทัศน์กองทัพบกช่อง 5 เพื่อจัดทำรายการ THE BEST Forever</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-12 p-3">
-					<div class="card card-custom bg-white border-white border-0 mb-3 p-2">
-						<img class="lecturer_picture" src="<?php echo base_url('/assets/img/news.png'); ?>" alt="lecturer">
-
-						<div class="card-body" style="overflow-y: auto">
-							<div class="date"><i class="calendar_icon fa-solid fa-calendar-days"></i> &nbsp; 21/06/2566</div>
-							<p class="news_content">แถลงข่าวบันทึกข้อตกลงมูลนิธิการจัดการเพื่อ
-								ความมั่นคงและสถานีโทรทัศน์กองทัพบกช่อง 5 เพื่อจัดทำรายการ THE BEST Forever</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-12 p-3">
-					<div class="card card-custom bg-white border-white border-0 mb-3 p-2">
-						<img class="lecturer_picture" src="<?php echo base_url('/assets/img/news.png'); ?>" alt="lecturer">
-
-						<div class="card-body" style="overflow-y: auto">
-							<div class="date"><i class="calendar_icon fa-solid fa-calendar-days"></i> &nbsp; 21/06/2566</div>
-							<p class="news_content">แถลงข่าวบันทึกข้อตกลงมูลนิธิการจัดการเพื่อ
-								ความมั่นคงและสถานีโทรทัศน์กองทัพบกช่อง 5 เพื่อจัดทำรายการ THE BEST Forever</p>
-						</div>
-					</div>
-				</div>
+					</a>
+				<?php } ?>
 			</div>
-
-
 			<div class="row justify-content-center mt-5 mb-5 pt-3 ">
 				<button type="submit" class="btn btn_all">ดูทั้งหมด</button>
 			</div>
-
-		</div>
 
 	</section>
 

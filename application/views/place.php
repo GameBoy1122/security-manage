@@ -64,7 +64,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 mb-4">
+                <!-- <div class="col-12 mb-4">
                     <div class="row">
                         <div class="col-auto">
                             <div class="btn icon m-0"><i class="fa-solid fa-phone" style="color: #ffffff;"></i></div>
@@ -84,13 +84,13 @@
                             ndcat_asmp@hotmail.com
                         </div>
                     </div>
-                </div>
+                </div> -->
 
-                <div class="col-12">
+                <!-- <div class="col-12">
                     <i class="fa-brands fa-facebook b" style="color: #3B5998; font-size: 30px;"></i>
                     <i class="fa-brands fa-line" style="color: #00CA5F; font-size: 30px; margin-left: 20px;"></i>
 
-                </div>
+                </div> -->
 
 
             </div>

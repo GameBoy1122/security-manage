@@ -390,7 +390,7 @@
                 </div>
             </div>
 
-            <div class="form_topic" for="work_name">หน่วยงาน(ที่ทำงาน)  <span style="color: red;">*</span></div>
+            <div class="form_topic" for="work_name">หน่วยงาน(ที่ทำงาน) <span style="color: red;">*</span></div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-">
                 <div class="form-outline one-form-line ">
                     <input type="text" id="work_name" class="form-control" />
@@ -455,7 +455,7 @@
                 </div>
             </div>
 
-            <div class="form_topic" for="mariage_status">สถานภาพสมรส  <span style="color: red;">*</span></div>
+            <div class="form_topic" for="mariage_status">สถานภาพสมรส <span style="color: red;">*</span></div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3">
                 <div class="form-outline size_shirt">
                     <select class="form-select one-form-line marital_status" id="marital_status" aria-label="Default select example">
@@ -680,14 +680,14 @@
                 </div>
             </div>
 
-            <div class="form_topic">๓. ลักษณะงาน/ประเภทธุรกิจของบริษัท  <span style="color: red;">*</span></div>
+            <div class="form_topic">๓. ลักษณะงาน/ประเภทธุรกิจของบริษัท <span style="color: red;">*</span></div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3">
                 <div class="form-outline w-100">
                     <textarea type="text" id="workinfo_workdetails" class="form-control" style="height: 200px;"></textarea>
                 </div>
             </div>
 
-            <div class="form_topic">๔. ความรับผิดชอบของท่านในปัจจุบัน  <span style="color: red;">*</span></div>
+            <div class="form_topic">๔. ความรับผิดชอบของท่านในปัจจุบัน <span style="color: red;">*</span></div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3">
                 <div class="form-outline w-100">
                     <textarea type="text" id="workinfo_responsibility" class="form-control" style="height: 200px;"></textarea>
@@ -697,7 +697,7 @@
 
 
         <div class="row mb-2">
-            <div class="header_topic">๕. ผลงานหรือความรับผิดชอบของงานที่ผ่านมาที่ผู้สมัครมีความภาคภูมิใจ  <span style="color: red;">*</span></div>
+            <div class="header_topic">๕. ผลงานหรือความรับผิดชอบของงานที่ผ่านมาที่ผู้สมัครมีความภาคภูมิใจ <span style="color: red;">*</span></div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3">
                 <div class="form-outline w-100">
                     <textarea type="text" id="achievements_job" class="form-control" style="height: 200px;"></textarea>
@@ -707,7 +707,7 @@
 
 
         <div class="row mb-2">
-            <div class="header_topic">๖. ความสามารถเฉพาะด้านของท่านหรือสิ่งที่ท่านสามารถจะทำประโยชน์ให้กับหลักสูตรได้  <span style="color: red;">*</span>
+            <div class="header_topic">๖. ความสามารถเฉพาะด้านของท่านหรือสิ่งที่ท่านสามารถจะทำประโยชน์ให้กับหลักสูตรได้ <span style="color: red;">*</span>
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3">
                 <div class="form-outline w-100">
@@ -719,7 +719,7 @@
 
 
         <div class="row mb-2">
-            <div class="header_topic">๗. เหตุผลที่ผู้สมัครมีความประสงค์ที่จะเข้ามาศึกษาในหลักสูตรฯ  <span style="color: red;">*</span></div>
+            <div class="header_topic">๗. เหตุผลที่ผู้สมัครมีความประสงค์ที่จะเข้ามาศึกษาในหลักสูตรฯ <span style="color: red;">*</span></div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3">
                 <div class="form-outline w-100">
                     <textarea type="text" id="desire" class="form-control" style="height: 200px;"></textarea>
@@ -731,7 +731,7 @@
 
         <div class="row mb-2">
             <div class="header_topic">๘. ผู้สมัครจะให้คำยืนยันอย่างไรต่อการเข้าเรียนในชั้นเรียนและร่วมกิจกรรม
-                รวมทั้งปฏิบัติตามกฎระเบียบของหลักสูตรทุกประการ  <span style="color: red;">*</span></div>
+                รวมทั้งปฏิบัติตามกฎระเบียบของหลักสูตรทุกประการ <span style="color: red;">*</span></div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3">
                 <div class="form-outline w-100">
                     <textarea type="text" id="course_regulations" class="form-control" style="height: 200px;"></textarea>
@@ -815,11 +815,11 @@
 
 <script>
     var id_token = $("#id_token").val();
+    var base_link = "<?php echo base_url('') ?>";
     $(function() {
-
         $(".select2-single").select2();
         $.ajax({
-            url: "http://localhost/security-manage/api/Address/get_provinces",
+            url: base_link + "Api/Address/get_provinces",
             dataType: "json",
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
@@ -841,7 +841,7 @@
             var province_id = $(this).val();
             // console.log('province_id', province_id);
             $.ajax({
-                url: "http://localhost/security-manage/api/Address/get_districts",
+                url: base_link + "Api/Address/get_districts",
                 method: "POST",
                 dataType: "json",
                 headers: {
@@ -872,7 +872,7 @@
             // console.log('district_id', district_id);
 
             $.ajax({
-                url: "http://localhost/security-manage/api/Address/get_sub_districts",
+                url: base_link + "Api/Address/get_sub_districts",
                 method: "POST",
                 dataType: "json",
                 headers: {
@@ -901,7 +901,7 @@
             // console.log('subdistrict', subdistrict);
 
             $.ajax({
-                url: "http://localhost/security-manage/api/Address/get_zipcode",
+                url: base_link + "Api/Address/get_zipcode",
                 method: "POST",
                 dataType: "json",
                 headers: {
@@ -921,7 +921,7 @@
         });
 
         $.ajax({
-            url: "http://localhost/security-manage/api/Address/get_provinces",
+            url: base_link + "Api/Address/get_provinces",
             dataType: "json",
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
@@ -943,7 +943,7 @@
             var work_province_id = $(this).val();
             // console.log('province_id', work_province_id);
             $.ajax({
-                url: "http://localhost/security-manage/api/Address/get_districts",
+                url: base_link + "Api/Address/get_districts",
                 method: "POST",
                 dataType: "json",
                 headers: {
@@ -973,7 +973,7 @@
             // console.log('district_id', work_district_id);
 
             $.ajax({
-                url: "http://localhost/security-manage/api/Address/get_sub_districts",
+                url: base_link + "Api/Address/get_sub_districts",
                 method: "POST",
                 dataType: "json",
                 headers: {
@@ -1002,7 +1002,7 @@
             // console.log('subdistrict', subdistrict);
 
             $.ajax({
-                url: "http://localhost/security-manage/api/Address/get_zipcode",
+                url: base_link + "Api/Address/get_zipcode",
                 method: "POST",
                 dataType: "json",
                 headers: {
@@ -1191,6 +1191,7 @@
             // $("#work_subdistrict"),
             // $("#work_postcode"),
             // $("#marital_status"),
+
             // $("#marital_name"),
             // $("#marital_job"),
             // $("#marital_day"),
@@ -1199,6 +1200,7 @@
             // $("#marital_ethnicity"),
             // $("#marital_nationality"),
             // $("#marital_religion"),
+
             // $("#secondary_education_branch"),
             // $("#secondary_education_academy"),
             // $("#secondary_education_year"),
@@ -1224,7 +1226,7 @@
             // $("#achievements_job"),
             // $("#abilities"),
             // $("#desire"),
-            // $("#course_regulations").val()
+            // $("#course_regulations")
         ];
 
         var isValid = true;
@@ -1258,7 +1260,7 @@
         $.ajax(send_data).done(function(response) {
             if (response.code == "0x0000-00000") {
                 $(".alert_modal_response").text('');
-                window.location.href = "<?php echo base_url('') ?>";
+                window.location.href = "<?php echo base_url('enroll_complete') ?>";
             } else if (response.code == "1x0000-00000") {
                 $(".alert_modal_response").text('เลขบัญประชนของท่านได้ทำการสมัครแล้วกรุณาตรวจสอบข้อมูลอีกครั้ง');
             } else if (response.code == "2x0000-00000") {
