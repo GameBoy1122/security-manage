@@ -18,7 +18,7 @@
         }
     }
 
-    
+
 
     .topic {
         font-size: 40px;
@@ -324,7 +324,7 @@
                             alt="lecturer">
 
                         <div class="card-body" style="overflow-y: auto">
-                            <h4 class="card-text lecturer_name">ศาสตราจารย์กิตติคุณ นพ. สุทธิพร จิตต์มิตรภาพ</h4>
+                            <h4 class="card-text lecturer_name">ศาสตราจารย์กิตติคุณ นพ.สุทธิพร จิตต์มิตรภาพ</h4>
                             <p class="card-text lecturer_position">
                                 ประธานคณะกรรมการส่งเสริมวิทยาศาสตร์ วิจัยและนวัตกรรม <br>นายกสภามหาวิทยาลัยกาฬสินธุ์
                             </p>
@@ -394,10 +394,9 @@
                             alt="lecturer">
 
                         <div class="card-body" style="overflow-y: auto">
-                            <h4 class="card-text lecturer_name">ดร. สถิตย์ ลิ่มพงศ์พันธุ์</h4>
+                            <h4 class="card-text lecturer_name">ศาสตราจารย์ ดร.สมคิด เลิศไพฑูรย์</h4>
                             <p class="card-text lecturer_position">
-                                สมาชิกวุฒิสภา, <br>อดีตปลัดกระทรวงการคลัง,
-                                <br>อดีตประธานกรรมการตลาดหลักทรัพย์แห่งประเทศไทย
+                                ประธานกรรมการ บริษัท สกาย ไอซีที จำกัด (มหาชน)
                             </p>
                         </div>
                     </div>
@@ -465,10 +464,9 @@
                             alt="lecturer">
 
                         <div class="card-body" style="overflow-y: auto">
-                            <h4 class="card-text lecturer_name">นพ.อำพล จินดาวัฒนะ</h4>
+                            <h4 class="card-text lecturer_name">พล.ร.อ.ศักดิ์สิทธิ์  เชิดบุญเมือง</h4>
                             <p class="card-text lecturer_position">
-                                สมาชิกวุฒิสภา <br>ผู้ทรงคุณวุฒิด้านสุขภาพและสังคมนักการ<br>
-                                สาธารณสุขดีเด่น ประเภทบริหาร <br>รางวัลชัยนาทนเรนทร พ.ศ.๒๕๕๙
+                                สมาชิกวุฒิสภา
                             </p>
                         </div>
                     </div>
@@ -608,7 +606,7 @@
                         <div class="card-body" style="overflow-y: auto">
                             <h4 class="card-text lecturer_name">อ.ลัดดาวัลย์ ชูช่วย</h4>
                             <p class="card-text lecturer_position">
-                            กรรมการอำนวยการหลักสูตร ฯ,<br> แชมป์สุดยอดอัจฉริยะนักจำระดับประเทศ 2 สมัย
+                                กรรมการอำนวยการหลักสูตร ฯ,<br> แชมป์สุดยอดอัจฉริยะนักจำระดับประเทศ 2 สมัย
                             </p>
                         </div>
                     </div>
