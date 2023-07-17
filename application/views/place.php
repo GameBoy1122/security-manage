@@ -41,7 +41,7 @@
     <section class="head mb-5" style=" position: relative;">
 
         <img src="<?php echo base_url('/assets/img/topic_pic.png'); ?>" alt="topic_pic" style="width:100%;">
-        <div class="topic_header">ติดต่อ</div>
+        <div class="topic_header">ติดต่อเรา</div>
     </section>
 
     <section>
@@ -62,7 +62,7 @@
                         <div class="col-auto ">
                             <div class="btn icon m-0"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i></div>
                         </div>
-                        <div class="col-auto  pt-2">
+                        <div class="col-xl-8 col-lg-6 col-sm-6 col-6 pt-2">
                             ศูนย์ประชุมวายุภักษ์ ศูนย์ราชการเฉลิมพระเกียรดิฯ หลักสี่ กรุงเทพมหานคร 10210
                         </div>
                     </div>
