@@ -16,6 +16,19 @@
 	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
+<?php if (isset($news)) { ?>
+	<meta property="og:url" content="<?php echo base_url('news/details/' . $news->news_id) ?>" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="<?php echo $news->title ?>" />
+	<meta property="og:description" content="<?php echo $new->title ?>" />
+	<meta property="og:image" content="<?php echo base_url('' . $news->image) ?>" />
+<?php } else { ?>
+	<meta property="og:url" content="<?php echo base_url('') ?>" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Advanced Security Mangement Program.a" />
+	<meta property="og:description" content="Advanced Security Mangement Program." />
+	<meta property="og:image" content="<?php echo base_url('assets/img/LOGO-Main.png') ?>" />
+<?php } ?>
 <?php
 $codeigniter_instance = &get_instance();
 $ln = $codeigniter_instance->session->userdata("CURRENT_LANGUAGE");

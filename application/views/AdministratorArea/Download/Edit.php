@@ -10,7 +10,7 @@ $codeigniter_instance = &get_instance();
 
 $configurations = array(
 
-    "PAGE_TITLE" => "Contact us",
+    "PAGE_TITLE" => "Download",
 
     "PAGE_HEADER" => array(
 
@@ -264,9 +264,7 @@ $configurations = array(
 
                                                         <label class="kt-radio kt-radio--bold kt-radio--success">
 
-                                                            <input type="radio" name="status" value="ACTIVATE" <?php if (!isset($Contact_us->status) || $Contact_us->status == "ACTIVATE")
-                                                                                                                    echo "checked" ?>>
-                                                            Activate
+                                                            <input type="radio" name="status" value="ACTIVATE" <?php if (!isset($Download->status) || $Download->status == "ACTIVATE") echo "checked" ?>> Activate
 
                                                             <span></span>
 
@@ -274,8 +272,7 @@ $configurations = array(
 
                                                         <label class="kt-radio kt-radio--bold kt-radio--warning">
 
-                                                            <input type="radio" name="status" value="SUSPEND" <?php if (isset($Contact_us->status) && $Contact_us->status != "ACTIVATE")
-                                                                                                                    echo "checked" ?>> Suspend
+                                                            <input type="radio" name="status" value="SUSPEND" <?php if (isset($Download->status) && $Download->status != "ACTIVATE") echo "checked" ?>> Suspend
 
                                                             <span></span>
 
@@ -297,131 +294,45 @@ $configurations = array(
 
                                                     <div class="kt-wizard-v3__form">
 
-                                                        <!-- <div class="form-group ">
-
-                                                            <div class="row">
-
-                                                                <div class="col-lg-12">
-
-                                                                    <label class="col-xl-3 col-lg-3 col-form-label" align="right">BANNER </label>
-
-                                                                    <div class="kt-avatar kt-avatar--outline" id="kt_user_add_avatar1">
-
-                                                                                                    <?php
-
-                                                                                                    $image = '';
-
-                                                                                                    if (isset($Contact_us->image) && $Contact_us->image != "" && file_exists(FCPATH . $Contact_us->image)) {
-
-                                                                                                        $image = uploadsDirectory("product/" . $Contact_us->image);
-                                                                                                    }
-
-                                                                                                    ?>
-
-                                                                        <div class="kt-avatar__holder" <?php if (isset($Contact_us->image))
-                                                                                                            echo ' style="background-image:url(' . $image . ');"'; ?>> </div>
-
-                                                                        <label class="kt-avatar__upload" data-toggle="kt-tooltip" title="Change Banner">
-
-                                                                            <i class="fa fa-pen"></i>
-
-                                                                            <input type="file" name="image[th]">
-
-                                                                        </label>
-
-                                                                        <span class="kt-avatar__cancel" data-toggle="kt-tooltip" title="Cancel Banner">
-
-                                                                            <i class="fa fa-times"></i>
-
-                                                                        </span>
-
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-
-                                                        </div> -->
                                                         <div class="form-group row">
 
-                                                            <label class="col-lg-3 col-form-label" align="right">Address</label>
+                                                            <label class="col-lg-3 col-form-label" align="right">Title</label>
 
                                                             <div class="col-lg-6 col-xl-7">
-                                                                <input type="text" class="form-control" name="address" value="<?php if (isset($Contact_us->address))
-                                                                                                                                echo $Contact_us->address ?>">
+
+                                                                <input type="text" class="form-control" name="title" value="<?php if (isset($Download->title)) echo $Download->title ?>">
+
                                                             </div>
 
                                                         </div>
 
+
                                                         <div class="form-group row">
 
-                                                            <label class="col-lg-3 col-form-label" align="right">Email </label>
+                                                            <label class="col-lg-3 col-form-label" align="right">Sort </label>
 
                                                             <div class="col-lg-6 col-xl-7">
 
-                                                                <input type="text" class="form-control" name="email" value="<?php if (isset($Contact_us->email))
-                                                                                                                                echo $Contact_us->email ?>">
+                                                                <input type="text" class="form-control" name="sort" value="<?php if (isset($Download->sort)) echo $Download->sort ?>">
 
                                                             </div>
 
                                                         </div>
                                                         <div class="form-group row">
 
-                                                            <label class="col-lg-3 col-form-label" align="right">Tel </label>
+                                                            <label class="col-lg-3 col-form-label" align="right">File</label>
 
                                                             <div class="col-lg-6 col-xl-7">
-
-                                                                <input type="text" class="form-control" name="tel" value="<?php if (isset($Contact_us->tel))
-                                                                                                                                echo $Contact_us->tel ?>">
-
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="form-group row">
-
-                                                            <label class="col-lg-3 col-form-label" align="right">Mobile phone </label>
-
-                                                            <div class="col-lg-6 col-xl-7">
-
-                                                                <input type="text" class="form-control" name="mobile_phone" value="<?php if (isset($Contact_us->mobile_phone))
-                                                                                                                                echo $Contact_us->mobile_phone ?>">
-
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="form-group row">
-
-                                                            <label class="col-lg-3 col-form-label" align="right">Facebook </label>
-
-                                                            <div class="col-lg-6 col-xl-7">
-
-                                                                <input type="text" class="form-control" name="facebook" value="<?php if (isset($Contact_us->facebook))
-                                                                                                                                    echo $Contact_us->facebook ?>">
-
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="form-group row">
-
-                                                            <label class="col-lg-3 col-form-label" align="right">line </label>
-
-                                                            <div class="col-lg-6 col-xl-7">
-
-                                                                <input type="text" class="form-control" name="line" value="<?php if (isset($Contact_us->line))
-                                                                                                                                    echo $Contact_us->line ?>">
-
-                                                            </div>
-
-                                                        </div>
-
-                                                        <div class="form-group row">
-
-                                                            <label class="col-lg-3 col-form-label" align="right">Location</label>
-
-                                                            <div class="col-lg-6 col-xl-7">
-
-                                                                <textarea class="summernote" id="location" name="location"><?php if (isset($Contact_us->location))
-                                                                                                                                echo $Contact_us->location; ?></textarea>
-
+                                                                <input type="file" name="image[th]" value="<?php echo isset($Download->file) ? $Download->file : ''; ?>">
+                                                                <?php if (isset($Download->file)) {
+                                                                    $file_slit_th = explode("/", $Download->file);
+                                                                    $filename_th = $file_slit_th[count($file_slit_th) - 1];
+                                                                ?>
+                                                                    <p class="form-control-static">
+                                                                        <a href="<?php echo base_url($Download->file) ?>" target="_blank"><i class="fa fa-file"></i> <?php echo $filename_th; ?></a>
+                                                                    </p>
+                                                                <?php
+                                                                } ?>
                                                             </div>
 
                                                         </div>
@@ -450,8 +361,7 @@ $configurations = array(
 
                                         <div class="col-lg-9 col-xl-9">
 
-                                            <button type="button" class="btn btn-primary" id="confirmSave">Save
-                                                Changes</button>
+                                            <button type="button" class="btn btn-primary" id="confirmSave">Save Changes</button>
 
                                             <button type="button" class="btn btn-outline-danger mr-2" id="kt_sweetalert_cancel">Cancel</button>
 
@@ -809,7 +719,7 @@ $configurations = array(
 
                                         if (result.dismiss === 'timer') {
 
-                                            location.reload();
+                                            window.history.back();
 
                                         }
 

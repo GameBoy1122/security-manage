@@ -4,7 +4,7 @@ defined("BASEPATH") OR exit("No direct script access allowed");
 
 
 
-class Director_model extends CI_Model
+class Training_place_model extends CI_Model
 
 {
 
@@ -22,9 +22,9 @@ class Director_model extends CI_Model
 
 
 
-    private $table_name = "director";
+    private $table_name = "training_place";
 
-    private $table_primary_key = "director_id";
+    private $table_primary_key = "training_place_id";
 
     private $table_columns;
 
