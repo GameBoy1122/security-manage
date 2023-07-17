@@ -11,9 +11,10 @@
 						<h5 class="text-uppercase">สำนักงานอำนวยการหลักสูตรการบริหารจัดการด้านความมั่นคงขั้นสูง</h5>
 						<p><i class="fa-solid fa-location-dot me-3 text-white"></i> เลขที่ 144/4 หมู่ที่ 4 ต.บางรักพัฒนา อ.บางบัวทอง จ.นนทบุรี 11110</p>
 						<p><i class="fas fa-phone me-3 text-white"></i>0 2926 6767, 0 2926 6895</p>
+						<p><i class="fas fa-phone me-3 text-white"></i>081-444-0099,085-356-0575,085-915-0951,063-941-4195</p>
 						<p>
 							<i class="fas fa-envelope me-3 text-white"></i>
-							ndcat_asmp@hotmail.com
+							info@asmp-f.com
 						</p>
 					</div>
 					<!--Grid column-->

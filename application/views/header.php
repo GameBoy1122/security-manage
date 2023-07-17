@@ -53,7 +53,7 @@ $current_url_array = explode("/", uri_string());
 			<button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-		
+
 			<div class="collapse navbar-collapse" id="navbarNavDropdown">
 				<ul class="navbar-nav me-auto" style="color:white">
 					<li class="nav-item">
@@ -75,11 +75,11 @@ $current_url_array = explode("/", uri_string());
 						<a class="nav-link" href="#">ทำเนียบรุ่น</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?php echo base_url('download') ?>">ดาวน์โหลดเอกสาร</a>
+						<a class="nav-link" href="<?php echo base_url('download') ?>">คลังความรู้</a>
 					</li>
 					<li class="nav-item dropdown me-3">
 						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							ติดต่อ
+							ติดต่อเรา
 						</a>
 						<ul class="dropdown-menu">
 							<li><a class="dropdown-item" href="<?php echo base_url('contact') ?>">สำนักงานอำนวยการ</a></li>
@@ -89,7 +89,7 @@ $current_url_array = explode("/", uri_string());
 				</ul>
 			</div>
 			<a class="navbar-brand" href="<?php echo base_url('Enroll_detail') ?>">
-				<button type="button" class="btn btn-light">สมัครเรียน</button>
+				<button type="button" class="btn btn-light">สมัครเรียน มส.16</button>
 			</a>
 		</div>
 	</nav>
