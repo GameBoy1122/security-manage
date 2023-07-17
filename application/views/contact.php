@@ -41,7 +41,7 @@
     <section class="head mb-5" style=" position: relative;">
 
         <img src="<?php echo base_url('/assets/img/topic_pic.png'); ?>" alt="topic_pic" style="width:100%;">
-        <div class="topic_header">ติดต่อ</div>
+        <div class="topic_header">ติดต่อเรา</div>
     </section>
 
     <section class="container">
@@ -56,9 +56,9 @@
                 <div class="col-12 mb-4">
                     <div class="row">
                         <div class="col-auto ">
-                            <div class="btn icon m-0"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i></div>
+                            <div class="btn icon "><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i></div>
                         </div>
-                        <div class="col-auto pt-2">
+                        <div class="col-xl-8 col-lg-6 col-sm-6 col-6 pt-2">
                             เลขที่ 144/4 หมู่ที่ 4 ต.บางรักพัฒนา อ.บางบัวทอง จ.นนทบุรี 11110
                         </div>
                     </div>
@@ -66,11 +66,11 @@
 
                 <div class="col-12 mb-4">
                     <div class="row">
-                        <div class="col-auto">
+                        <div class="col-auto mt-2">
                             <div class="btn icon m-0"><i class="fa-solid fa-phone" style="color: #ffffff;"></i></div>
                         </div>
-                        <div class="col-auto mt-2">
-                            0 2926 6767, 0 2926 6895
+                        <div class="col-auto">
+                            0 2926 6767, 0 2926 6895<br>081-444-0099,085-356-0575<br>085-915-0951,063-941-4195
                         </div>
                     </div>
                 </div>
@@ -81,7 +81,7 @@
                             <div class="btn icon m-0"><i class="fa-solid fa-envelope" style="color: #ffffff;"></i></div>
                         </div>
                         <div class="col-auto mt-2">
-                            ndcat_asmp@hotmail.com
+                            info@asmp-f.com
                         </div>
                     </div>
                 </div>

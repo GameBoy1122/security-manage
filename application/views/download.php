@@ -46,7 +46,7 @@
     <section class="head mb-5" style=" position: relative;">
 
         <img src="<?php echo base_url('/assets/img/topic_pic.png'); ?>" alt="topic_pic" style="width:100%;">
-        <div class="topic_header">ดาวน์โหลดเอกสาร</div>
+        <div class="topic_header">คลังความรู้</div>
     </section>
 
     <section>
