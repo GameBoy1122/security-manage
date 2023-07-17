@@ -10,7 +10,7 @@ $codeigniter_instance = &get_instance();
 
 $configurations = array(
 
-    "PAGE_TITLE" => "BANNER MAIN",
+    "PAGE_TITLE" => "Course staff",
 
 );
 
@@ -174,7 +174,7 @@ $configurations = array(
 
                                         <div class="kt-portlet__head-wrapper">
 
-                                            <a href="<?php echo base_url('AdministratorArea/Bannermain/edit'); ?>">
+                                            <a href="<?php echo base_url('AdministratorArea/Course_staff/edit'); ?>">
 
                                                 <button type="button" class="btn btn-brand btn-icon-sm">
 
@@ -466,7 +466,7 @@ $configurations = array(
 
                     type: 'remote',
 
-                    source: '<?php echo base_url('AdministratorArea/Bannermain/datatables'); ?>',
+                    source: '<?php echo base_url('AdministratorArea/Course_staff/datatables'); ?>',
 
                     pageSize: 10,
 
@@ -510,7 +510,7 @@ $configurations = array(
 
                     {
 
-                        field: 'bannermain_id',
+                        field: 'course_staff_id',
 
                         title: '#',
 
@@ -527,11 +527,11 @@ $configurations = array(
                     },
                     {
 
-                        field: 'title',
+                        field: 'name',
 
                         title: 'TITLE',
 
-                      
+
 
                         autoHide: false,
 
@@ -539,19 +539,33 @@ $configurations = array(
 
                     },
 
-                    // {
+                    {
 
-                    //     field: 'description',
+                        field: 'position',
 
-                    //     title: 'DESCRIPTION',
+                        title: 'POSITION',
 
-                        
 
-                    //     autoHide: false,
 
-                    //     textAlign: 'center',
+                        autoHide: false,
 
-                    // },
+                        textAlign: 'center',
+
+                    },
+                    {
+
+                        field: 'sort',
+
+                        title: 'SORT',
+
+
+
+                        autoHide: false,
+
+                        textAlign: 'center',
+
+                    },
+
 
                     {
 
@@ -579,9 +593,9 @@ $configurations = array(
 
                         template: function(row) {
 
-                            var db_id = row['bannermain_id'];
+                            var db_id = row['Course_staff_id'];
 
-                            var action_header = '<a href="<?php echo base_url('AdministratorArea/Bannermain/edit/'); ?>' + db_id + '"class="btn btn-sm btn-clean btn-icon btn-icon-sm" title="Edit details">' +
+                            var action_header = '<a href="<?php echo base_url('AdministratorArea/Course_staff/edit/'); ?>' + db_id + '"class="btn btn-sm btn-clean btn-icon btn-icon-sm" title="Edit details">' +
 
                                 '<i class="flaticon2-paper"></i>' +
 
@@ -595,7 +609,7 @@ $configurations = array(
 
                                 '</a>' +
 
-                                '<input type="hidden" id="' + db_id + '" value="<?php echo base_url('AdministratorArea/Bannermain/delete/'); ?>' + db_id + '">';
+                                '<input type="hidden" id="' + db_id + '" value="<?php echo base_url('AdministratorArea/Course_staff/delete/'); ?>' + db_id + '">';
 
                             $(document).ready(function() {
 

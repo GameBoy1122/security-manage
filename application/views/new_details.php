@@ -46,9 +46,13 @@
             <div class="col-12">
                 <div style="font-weight: 400; font-size: 20px; padding-top: 10px; color: #1B3D84">Share</div>
                 <div class="social_icon">
-                    <i class="fa-brands fa-facebook" style="font-size: 28px;padding: 10px 10px; padding-left: 0px;  color: #0277bd;"></i>
+                    <a role="button" href="#" id="fb-share-button" target="_blank">
+                        <i class="fa-brands fa-facebook" style="font-size: 28px;padding: 10px 10px; padding-left: 0px;  color: #0277bd;"></i>
+                    </a>
                     <i class="fa-brands fa-line" style="font-size: 28px;padding: 10px 10px; padding-left: 0px;  color: #00CA5F;"></i>
-                    <i class="fa-brands fa-twitter" style="font-size: 28px;padding: 10px 10px; padding-left: 0px;  color: #1DA1F2;"></i>
+                    <a role="button" href="https://twitter.com/intent/tweet?text= <?php echo base_url('news/details/' . $news->news_id) ?>" target="_blank">
+                        <i class="fa-brands fa-twitter" style="font-size: 28px;padding: 10px 10px; padding-left: 0px;  color: #1DA1F2;"></i>
+                    </a>
                 </div>
             </div>
 
@@ -168,4 +172,29 @@
             ]
         });
     });
+</script>
+<script>
+    // $(document).ready(function() {
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+
+    var fbButton = document.getElementById('fb-share-button');
+    var url = window.location.href;
+
+
+    fbButton.addEventListener('click', function() {
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' + url,
+            'facebook-share-dialog',
+            'width=800,height=600'
+        );
+        return false;
+    });
+    // });
 </script>

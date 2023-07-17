@@ -10,7 +10,7 @@ $codeigniter_instance = &get_instance();
 
 $configurations = array(
 
-    "PAGE_TITLE" => "Director",
+    "PAGE_TITLE" => "Course Steering Committee",
 
     "PAGE_HEADER" => array(
 
@@ -264,7 +264,7 @@ $configurations = array(
 
                                                         <label class="kt-radio kt-radio--bold kt-radio--success">
 
-                                                            <input type="radio" name="status" value="ACTIVATE" <?php if (!isset($Director->status) || $Director->status == "ACTIVATE") echo "checked" ?>> Activate
+                                                            <input type="radio" name="status" value="ACTIVATE" <?php if (!isset($Course_steering_committee->status) || $Course_steering_committee->status == "ACTIVATE") echo "checked" ?>> Activate
 
                                                             <span></span>
 
@@ -272,7 +272,7 @@ $configurations = array(
 
                                                         <label class="kt-radio kt-radio--bold kt-radio--warning">
 
-                                                            <input type="radio" name="status" value="SUSPEND" <?php if (isset($Director->status) && $Director->status != "ACTIVATE") echo "checked" ?>> Suspend
+                                                            <input type="radio" name="status" value="SUSPEND" <?php if (isset($Course_steering_committee->status) && $Course_steering_committee->status != "ACTIVATE") echo "checked" ?>> Suspend
 
                                                             <span></span>
 
@@ -308,14 +308,14 @@ $configurations = array(
 
                                                                         $image = '';
 
-                                                                        if (isset($Director->image) && $Director->image != "" && file_exists(FCPATH . $Director->image)) {
+                                                                        if (isset($Course_steering_committee->image) && $Course_steering_committee->image != "" && file_exists(FCPATH . $Course_steering_committee->image)) {
 
-                                                                            $image = base_url('' . $Director->image);
+                                                                            $image = base_url('' . $Course_steering_committee->image);
                                                                         }
 
                                                                         ?>
 
-                                                                        <div class="kt-avatar__holder" <?php if (isset($Director->image)) echo ' style="background-image:url(' . $image . ');"'; ?>> </div>
+                                                                        <div class="kt-avatar__holder" <?php if (isset($Course_steering_committee->image)) echo ' style="background-image:url(' . $image . ');"'; ?>> </div>
 
                                                                         <label class="kt-avatar__upload" data-toggle="kt-tooltip" title="Change Banner">
 
@@ -339,11 +339,11 @@ $configurations = array(
                                                         </div>
                                                         <div class="form-group row">
 
-                                                            <label class="col-lg-3 col-form-label" align="right">Title</label>
+                                                            <label class="col-lg-3 col-form-label" align="right">Name</label>
 
                                                             <div class="col-lg-6 col-xl-7">
 
-                                                                <input type="text" class="form-control" name="title" value="<?php if (isset($Director->title)) echo $Director->title ?>">
+                                                                <input type="text" class="form-control" name="name" value="<?php if (isset($Course_steering_committee->name)) echo $Course_steering_committee->name ?>">
 
                                                             </div>
 
@@ -351,11 +351,23 @@ $configurations = array(
 
                                                         <div class="form-group row">
 
-                                                            <label class="col-lg-3 col-form-label" align="right">Description </label>
+                                                            <label class="col-lg-3 col-form-label" align="right">Position </label>
 
                                                             <div class="col-lg-6 col-xl-7">
 
-                                                                <textarea class="summernote" id="description" name="description"><?php if (isset($Director->description)) echo $Director->description; ?></textarea>
+                                                                <input type="text" class="form-control" name="position" value="<?php if (isset($Course_steering_committee->position)) echo $Course_steering_committee->position ?>">
+
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="form-group row">
+
+                                                            <label class="col-lg-3 col-form-label" align="right">Sort </label>
+
+                                                            <div class="col-lg-6 col-xl-7">
+
+                                                                <input type="text" class="form-control" name="sort" value="<?php if (isset($Course_steering_committee->sort)) echo $Course_steering_committee->sort ?>">
 
                                                             </div>
 
