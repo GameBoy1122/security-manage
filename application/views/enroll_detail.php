@@ -239,7 +239,7 @@
 
             <div class="row justify-content-center mt-5 mb-5 ">
                 <div class="col-12 text-center">
-                    <a href="<?php echo base_url('Enroll') ?>"> <button type="submit" class="btn btn_click">สมัคร</button></a>
+                    <a href="<?php echo base_url('Enroll') ?>"> <button type="submit" class="btn btn_click">สมัครเรียน มส.16</button></a>
                 </div>
             </div>
         </div>

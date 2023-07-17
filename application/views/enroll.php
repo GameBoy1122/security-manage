@@ -561,19 +561,19 @@
             <div class="form_topic">ระดับอุดมศึกษา ปริญญาตรี</div>
             <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 mt-2">
                 <div class="form-outline">
-                    <label class="form-label lable_show" for="bachelors_degree_branch">สาขาวิชาที่จบการศึกษา <span style="color: red;">*</span></label>
+                    <label class="form-label lable_show" for="bachelors_degree_branch">สาขาวิชาที่จบการศึกษา </label>
                     <input type="text" id="bachelors_degree_branch" class="form-control" />
                 </div>
             </div>
             <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 mt-2">
                 <div class="form-outline">
-                    <label class="form-label lable_show" for="bachelors_degree_academy">สถาบันการศึกษา <span style="color: red;">*</span></label>
+                    <label class="form-label lable_show" for="bachelors_degree_academy">สถาบันการศึกษา </label>
                     <input type="text" id="bachelors_degree_academy" class="form-control" />
                 </div>
             </div>
             <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 mt-2">
                 <div class="form-outline">
-                    <label class="form-label lable_show" for="bachelors_degree_year">ปี พ.ศ. <span style="color: red;">*</span></label>
+                    <label class="form-label lable_show" for="bachelors_degree_year">ปี พ.ศ. </label>
                     <input type="text" id="bachelors_degree_year" class="form-control" />
                 </div>
             </div>
@@ -581,19 +581,19 @@
             <div class="form_topic">ระดับอุดมศึกษา ปริญญาโท</div>
             <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 mt-2">
                 <div class="form-outline">
-                    <label class="form-label lable_show" for="masters_degree_branch">สาขาวิชาที่จบการศึกษา <span style="color: red;">*</span></label>
+                    <label class="form-label lable_show" for="masters_degree_branch">สาขาวิชาที่จบการศึกษา </label>
                     <input type="text" id="masters_degree_branch" class="form-control" />
                 </div>
             </div>
             <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 mt-2">
                 <div class="form-outline">
-                    <label class="form-label lable_show" for="masters_degree_academy">สถาบันการศึกษา <span style="color: red;">*</span></label>
+                    <label class="form-label lable_show" for="masters_degree_academy">สถาบันการศึกษา </label>
                     <input type="text" id="masters_degree_academy" class="form-control" />
                 </div>
             </div>
             <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 mt-2">
                 <div class="form-outline">
-                    <label class="form-label lable_show" for="masters_degree_year">ปี พ.ศ. <span style="color: red;">*</span></label>
+                    <label class="form-label lable_show" for="masters_degree_year">ปี พ.ศ.</label>
                     <input type="text" id="masters_degree_year" class="form-control" />
                 </div>
             </div>
@@ -601,19 +601,19 @@
             <div class="form_topic">ระดับอุดมศึกษา ปริญญาเอก</div>
             <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 mt-2">
                 <div class="form-outline">
-                    <label class="form-label lable_show" for="doctorate_branch">สาขาวิชาที่จบการศึกษา <span style="color: red;">*</span></label>
+                    <label class="form-label lable_show" for="doctorate_branch">สาขาวิชาที่จบการศึกษา </label>
                     <input type="text" id="doctorate_branch" class="form-control" />
                 </div>
             </div>
             <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 mt-2">
                 <div class="form-outline">
-                    <label class="form-label lable_show" for="doctorate_academy">สถาบันการศึกษา <span style="color: red;">*</span></label>
+                    <label class="form-label lable_show" for="doctorate_academy">สถาบันการศึกษา </label>
                     <input type="text" id="doctorate_academy" class="form-control" />
                 </div>
             </div>
             <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 mt-2">
                 <div class="form-outline">
-                    <label class="form-label lable_show" for="doctorate_year">ปี พ.ศ. <span style="color: red;">*</span></label>
+                    <label class="form-label lable_show" for="doctorate_year">ปี พ.ศ.</label>
                     <input type="text" id="doctorate_year" class="form-control" />
                 </div>
             </div>
@@ -663,19 +663,19 @@
             <div class="lable_show mt-2 mb-2">๓.๒.๒</div>
             <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
                 <div class="form-outline">
-                    <label class="form-label lable_show" for="workinfo_position_2">ตำแหน่ง <span style="color: red;">*</span></label>
+                    <label class="form-label lable_show" for="workinfo_position_2">ตำแหน่ง </label>
                     <input type="text" id="workinfo_position_2" class="form-control" />
                 </div>
             </div>
             <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 ">
                 <div class="form-outline">
-                    <label class="form-label lable_show" for="workinfo_companyname_2">ชื่อหน่วยงาน/องค์กร <span style="color: red;">*</span></label>
+                    <label class="form-label lable_show" for="workinfo_companyname_2">ชื่อหน่วยงาน/องค์กร </label>
                     <input type="text" id="workinfo_companyname_2" class="form-control" />
                 </div>
             </div>
             <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
                 <div class="form-outline">
-                    <label class="form-label lable_show" for="workinfo_jobtype_2">ลักษณะ/ประเภท <span style="color: red;">*</span></label>
+                    <label class="form-label lable_show" for="workinfo_jobtype_2">ลักษณะ/ประเภท </label>
                     <input type="text" id="workinfo_jobtype_2" class="form-control" />
                 </div>
             </div>
@@ -1159,38 +1159,38 @@
 
         var fields = [
             $("#name_th"),
-            // $("#name_en"),
-            // $("#nickname"),
-            // $("#id_cardname"),
-            // $("#shirt_select"),
-            // $("#birthday_day"),
-            // $("#birthday_month"),
-            // $("#birthday_year"),
-            // $("#ethnicity"),
-            // $("#nationality"),
-            // $("#religion"),
-            // $("#current_position"),
-            // $("#address_no"),
-            // $("#address_alley"),
-            // $("#address_road"),
-            // $("#address_province"),
-            // $("#address_district"),
-            // $("#address_subdistrict"),
-            // $("#address_postcode"),
-            // $("#work_address"),
-            // $("#work_mobile"),
-            // $("#work_fax"),
-            // $("#work_house"),
-            // $("#work_email"),
-            // $("#work_name"),
-            // $("#work_no"),
-            // $("#work_alley"),
-            // $("#work_road"),
-            // $("#work_province"),
-            // $("#work_district"),
-            // $("#work_subdistrict"),
-            // $("#work_postcode"),
-            // $("#marital_status"),
+            $("#name_en"),
+            $("#nickname"),
+            $("#id_cardname"),
+            $("#shirt_select"),
+            $("#birthday_day"),
+            $("#birthday_month"),
+            $("#birthday_year"),
+            $("#ethnicity"),
+            $("#nationality"),
+            $("#religion"),
+            $("#current_position"),
+            $("#address_no"),
+            $("#address_alley"),
+            $("#address_road"),
+            $("#address_province"),
+            $("#address_district"),
+            $("#address_subdistrict"),
+            $("#address_postcode"),
+            $("#work_address"),
+            $("#work_mobile"),
+            $("#work_fax"),
+            $("#work_house"),
+            $("#work_email"),
+            $("#work_name"),
+            $("#work_no"),
+            $("#work_alley"),
+            $("#work_road"),
+            $("#work_province"),
+            $("#work_district"),
+            $("#work_subdistrict"),
+            $("#work_postcode"),
+            $("#marital_status"),
 
             // $("#marital_name"),
             // $("#marital_job"),
@@ -1201,32 +1201,36 @@
             // $("#marital_nationality"),
             // $("#marital_religion"),
 
-            // $("#secondary_education_branch"),
-            // $("#secondary_education_academy"),
-            // $("#secondary_education_year"),
+            $("#secondary_education_branch"),
+            $("#secondary_education_academy"),
+            $("#secondary_education_year"),
+
             // $("#bachelors_degree_branch"),
             // $("#bachelors_degree_academy"),
             // $("#bachelors_degree_year"),
             // $("#masters_degree_branch"),
             // $("#masters_degree_academy"),
             // $("#masters_degree_year"),
-            // $("#doctorate_branch"),
-            // $("#doctorate_academy"),
-            // $("#doctorate_year"),
-            // $("#training_course_information"),
-            // $("#workinfo_work_history"),
-            // $("#workinfo_position"),
-            // $("#workinfo_companyname"),
-            // $("#workinfo_jobtype"),
+             
+            $("#doctorate_branch"),
+            $("#doctorate_academy"),
+            $("#doctorate_year"),
+            $("#training_course_information"),
+            $("#workinfo_work_history"),
+            $("#workinfo_position"),
+            $("#workinfo_companyname"),
+            $("#workinfo_jobtype"),
+
             // $("#workinfo_position_2"),
             // $("#workinfo_companyname_2"),
             // $("#workinfo_jobtype_2"),
-            // $("#workinfo_workdetails"),
-            // $("#workinfo_responsibility"),
-            // $("#achievements_job"),
-            // $("#abilities"),
-            // $("#desire"),
-            // $("#course_regulations")
+
+            $("#workinfo_workdetails"),
+            $("#workinfo_responsibility"),
+            $("#achievements_job"),
+            $("#abilities"),
+            $("#desire"),
+            $("#course_regulations")
         ];
 
         var isValid = true;
