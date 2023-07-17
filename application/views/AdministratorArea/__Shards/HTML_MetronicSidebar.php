@@ -254,6 +254,40 @@ $head_open = "kt-menu__item--here kt-menu__item--open";
                         </div>
 
                     </li>
+                    <li class="kt-menu__item kt-menu__item--submenu <?php if ($class == 'Enroll') echo $head_open;
+                                                                    else echo ''; ?>" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+
+                        <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+
+                            <i class="kt-menu__link-icon flaticon-user"></i>
+
+                            <span class="kt-menu__link-text">ENROLL</span>
+
+                            <i class="kt-menu__ver-arrow la la-angle-right"></i>
+
+                        </a>
+
+                        <div class="kt-menu__submenu " kt-hidden-height="80" style="">
+
+                            <span class="kt-menu__arrow"></span>
+
+                            <ul class="kt-menu__subnav">
+
+                                <li class="kt-menu__item kt-menu__item--<?php if ($class == 'Enroll') echo 'active';
+                                                                        else echo ''; ?>" aria-haspopup="true">
+
+                                    <a href="<?php echo base_url("AdministratorArea/Enroll") ?>" class="kt-menu__link ">
+
+                                        <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
+
+                                        <span class="kt-menu__link-text">Enroll</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </li>
                     
                     <li class="kt-menu__item kt-menu__item--submenu <?php if ($class == 'News') echo $head_open;
                                                                     else echo ''; ?>" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">

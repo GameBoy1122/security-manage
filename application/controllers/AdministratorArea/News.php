@@ -104,7 +104,6 @@ class News extends CI_Controller
 
             $News->title = $this->input->post("title");
             
-
             $News->description = $this->input->post("description");
             
             $News->link = $this->input->post("link");

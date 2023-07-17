@@ -339,52 +339,28 @@ $configurations = array(
                                                         </div>
                                                         <div class="form-group row">
 
-                                                            <label class="col-lg-3 col-form-label" align="right">Title TH</label>
+                                                            <label class="col-lg-3 col-form-label" align="right">Title</label>
 
                                                             <div class="col-lg-6 col-xl-7">
 
-                                                                <input type="text" class="form-control" name="title_th" value="<?php if (isset($News->title_th)) echo $News->title_th ?>">
+                                                                <input type="text" class="form-control" name="title" value="<?php if (isset($News->title)) echo $News->title ?>">
 
                                                             </div>
 
                                                         </div>
+                                                       
                                                         <div class="form-group row">
 
-                                                            <label class="col-lg-3 col-form-label" align="right">Title EN</label>
+                                                            <label class="col-lg-3 col-form-label" align="right">Description </label>
 
                                                             <div class="col-lg-6 col-xl-7">
 
-                                                                <input type="text" class="form-control" name="title_en" value="<?php if (isset($News->title_en)) echo $News->title_en ?>">
+                                                                <textarea class="summernote" id="description" name="description"><?php if (isset($News->description)) echo $News->description; ?></textarea>
 
                                                             </div>
 
                                                         </div>
-                                                        <div class="form-group row">
-
-                                                            <label class="col-lg-3 col-form-label" align="right">Description TH</label>
-
-                                                            <div class="col-lg-6 col-xl-7">
-
-                                                                <textarea class="summernote" id="description_th" name="description_th"><?php if (isset($News->description_th)) echo $News->description_th; ?></textarea>
-
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="form-group row">
-
-                                                            <label class="col-lg-3 col-form-label" align="right">Description EN</label>
-
-                                                            <div class="col-lg-5 col-xl-6">
-
-                                                                <!-- <textarea class="ckeditor form-control" name="description" rows="6" data-error-container="#editor2_error"></textarea>
-                                                                <div id="editor2_error"> </div> -->
-                                                                <!-- <textarea class="ckeditor form-control" name="description" rows="6" data-error-container="#editor2_error" value="<?php if (isset($product->detail_en)) echo $product->detail_en ?>"></textarea>
-                                                                <div id="editor2_error"> </div> -->
-                                                                <textarea class="summernote" id="description_en" name="description_en"><?php if (isset($News->description_en)) echo $News->description_en; ?></textarea>
-
-                                                            </div>
-
-                                                        </div>
+                                                       
                                                         <div class="form-group row">
 
                                                             <label class="col-lg-3 col-form-label" align="right">View more ( Link )</label>
