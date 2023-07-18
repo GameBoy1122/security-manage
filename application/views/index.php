@@ -112,16 +112,17 @@
 				<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
 			</div>
 			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<img src="<?php echo base_url('assets/img/banner3.png') ?>" class="d-block w-100" alt="...">
-				</div>
-				<div class="carousel-item ">
-					<img src="<?php echo base_url('assets/img/banner1.png') ?>" class="d-block w-100" alt="...">
-				</div>
-				<div class="carousel-item">
-					<img src="<?php echo base_url('assets/img/banner2.png') ?>" class="d-block w-100" alt="...">
-				</div>
-
+				<?php foreach ($bannermain as $key => $bannermain_list) { ?>
+					<?php if ($key == 0) { ?>
+						<div class="carousel-item active">
+							<img src="<?php echo base_url('') . $bannermain_list->image ?>" class="d-block w-100" alt="...">
+						</div>
+					<?php } else { ?>
+						<div class="carousel-item ">
+							<img src="<?php echo base_url('') . $bannermain_list->image ?>" class="d-block w-100" alt="...">
+						</div>
+					<?php } ?>
+				<?php } ?>
 			</div>
 			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
