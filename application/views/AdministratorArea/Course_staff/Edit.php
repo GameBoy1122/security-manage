@@ -10,7 +10,7 @@ $codeigniter_instance = &get_instance();
 
 $configurations = array(
 
-    "PAGE_TITLE" => "Contact us",
+    "PAGE_TITLE" => "Course Staff",
 
     "PAGE_HEADER" => array(
 
@@ -264,9 +264,7 @@ $configurations = array(
 
                                                         <label class="kt-radio kt-radio--bold kt-radio--success">
 
-                                                            <input type="radio" name="status" value="ACTIVATE" <?php if (!isset($Contact_us->status) || $Contact_us->status == "ACTIVATE")
-                                                                                                                    echo "checked" ?>>
-                                                            Activate
+                                                            <input type="radio" name="status" value="ACTIVATE" <?php if (!isset($Course_staff->status) || $Course_staff->status == "ACTIVATE") echo "checked" ?>> Activate
 
                                                             <span></span>
 
@@ -274,8 +272,7 @@ $configurations = array(
 
                                                         <label class="kt-radio kt-radio--bold kt-radio--warning">
 
-                                                            <input type="radio" name="status" value="SUSPEND" <?php if (isset($Contact_us->status) && $Contact_us->status != "ACTIVATE")
-                                                                                                                    echo "checked" ?>> Suspend
+                                                            <input type="radio" name="status" value="SUSPEND" <?php if (isset($Course_staff->status) && $Course_staff->status != "ACTIVATE") echo "checked" ?>> Suspend
 
                                                             <span></span>
 
@@ -297,29 +294,28 @@ $configurations = array(
 
                                                     <div class="kt-wizard-v3__form">
 
-                                                        <!-- <div class="form-group ">
+                                                        <div class="form-group ">
 
                                                             <div class="row">
 
                                                                 <div class="col-lg-12">
 
-                                                                    <label class="col-xl-3 col-lg-3 col-form-label" align="right">BANNER </label>
+                                                                    <label class="col-xl-3 col-lg-3 col-form-label" align="right">Image </label>
 
                                                                     <div class="kt-avatar kt-avatar--outline" id="kt_user_add_avatar1">
 
-                                                                                                    <?php
+                                                                        <?php
 
-                                                                                                    $image = '';
+                                                                        $image = '';
 
-                                                                                                    if (isset($Contact_us->image) && $Contact_us->image != "" && file_exists(FCPATH . $Contact_us->image)) {
+                                                                        if (isset($Course_staff->image) && $Course_staff->image != "" && file_exists(FCPATH . $Course_staff->image)) {
 
-                                                                                                        $image = uploadsDirectory("product/" . $Contact_us->image);
-                                                                                                    }
+                                                                            $image = base_url('' . $Course_staff->image);
+                                                                        }
 
-                                                                                                    ?>
+                                                                        ?>
 
-                                                                        <div class="kt-avatar__holder" <?php if (isset($Contact_us->image))
-                                                                                                            echo ' style="background-image:url(' . $image . ');"'; ?>> </div>
+                                                                        <div class="kt-avatar__holder" <?php if (isset($Course_staff->image)) echo ' style="background-image:url(' . $image . ');"'; ?>> </div>
 
                                                                         <label class="kt-avatar__upload" data-toggle="kt-tooltip" title="Change Banner">
 
@@ -340,74 +336,14 @@ $configurations = array(
 
                                                             </div>
 
-                                                        </div> -->
-                                                        <div class="form-group row">
-
-                                                            <label class="col-lg-3 col-form-label" align="right">Address</label>
-
-                                                            <div class="col-lg-6 col-xl-7">
-                                                                <input type="text" class="form-control" name="address" value="<?php if (isset($Contact_us->address))
-                                                                                                                                echo $Contact_us->address ?>">
-                                                            </div>
-
-                                                        </div>
-
-                                                        <div class="form-group row">
-
-                                                            <label class="col-lg-3 col-form-label" align="right">Email </label>
-
-                                                            <div class="col-lg-6 col-xl-7">
-
-                                                                <input type="text" class="form-control" name="email" value="<?php if (isset($Contact_us->email))
-                                                                                                                                echo $Contact_us->email ?>">
-
-                                                            </div>
-
                                                         </div>
                                                         <div class="form-group row">
 
-                                                            <label class="col-lg-3 col-form-label" align="right">Tel </label>
+                                                            <label class="col-lg-3 col-form-label" align="right">Name</label>
 
                                                             <div class="col-lg-6 col-xl-7">
 
-                                                                <input type="text" class="form-control" name="tel" value="<?php if (isset($Contact_us->tel))
-                                                                                                                                echo $Contact_us->tel ?>">
-
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="form-group row">
-
-                                                            <label class="col-lg-3 col-form-label" align="right">Mobile phone </label>
-
-                                                            <div class="col-lg-6 col-xl-7">
-
-                                                                <input type="text" class="form-control" name="mobile_phone" value="<?php if (isset($Contact_us->mobile_phone))
-                                                                                                                                echo $Contact_us->mobile_phone ?>">
-
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="form-group row">
-
-                                                            <label class="col-lg-3 col-form-label" align="right">Facebook </label>
-
-                                                            <div class="col-lg-6 col-xl-7">
-
-                                                                <input type="text" class="form-control" name="facebook" value="<?php if (isset($Contact_us->facebook))
-                                                                                                                                    echo $Contact_us->facebook ?>">
-
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="form-group row">
-
-                                                            <label class="col-lg-3 col-form-label" align="right">line </label>
-
-                                                            <div class="col-lg-6 col-xl-7">
-
-                                                                <input type="text" class="form-control" name="line" value="<?php if (isset($Contact_us->line))
-                                                                                                                                    echo $Contact_us->line ?>">
+                                                                <input type="text" class="form-control" name="name" value="<?php if (isset($Course_staff->name)) echo $Course_staff->name ?>">
 
                                                             </div>
 
@@ -415,12 +351,23 @@ $configurations = array(
 
                                                         <div class="form-group row">
 
-                                                            <label class="col-lg-3 col-form-label" align="right">Location</label>
+                                                            <label class="col-lg-3 col-form-label" align="right">Position </label>
 
                                                             <div class="col-lg-6 col-xl-7">
 
-                                                                <textarea class="summernote" id="location" name="location"><?php if (isset($Contact_us->location))
-                                                                                                                                echo $Contact_us->location; ?></textarea>
+                                                                <input type="text" class="form-control" name="position" value="<?php if (isset($Course_staff->position)) echo $Course_staff->position ?>">
+
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="form-group row">
+
+                                                            <label class="col-lg-3 col-form-label" align="right">Sort </label>
+
+                                                            <div class="col-lg-6 col-xl-7">
+
+                                                                <input type="text" class="form-control" name="sort" value="<?php if (isset($Course_staff->sort)) echo $Course_staff->sort ?>">
 
                                                             </div>
 
@@ -450,8 +397,7 @@ $configurations = array(
 
                                         <div class="col-lg-9 col-xl-9">
 
-                                            <button type="button" class="btn btn-primary" id="confirmSave">Save
-                                                Changes</button>
+                                            <button type="button" class="btn btn-primary" id="confirmSave">Save Changes</button>
 
                                             <button type="button" class="btn btn-outline-danger mr-2" id="kt_sweetalert_cancel">Cancel</button>
 
@@ -809,7 +755,7 @@ $configurations = array(
 
                                         if (result.dismiss === 'timer') {
 
-                                            location.reload();
+                                            window.history.back();
 
                                         }
 

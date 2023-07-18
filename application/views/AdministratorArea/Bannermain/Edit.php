@@ -349,7 +349,7 @@ $configurations = array(
 
                                                         </div>
                                                         
-                                                        <div class="form-group row">
+                                                        <div class="form-group row" hidden>
 
                                                             <label class="col-lg-3 col-form-label" align="right">Description</label>
 
@@ -361,7 +361,7 @@ $configurations = array(
 
                                                         </div>
                                                         
-                                                        <div class="form-group row">
+                                                        <div class="form-group row" hidden>
 
                                                             <label class="col-lg-3 col-form-label" align="right">View more ( Link )</label>
 

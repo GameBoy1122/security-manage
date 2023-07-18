@@ -4,7 +4,7 @@
 
         <a href="<?php echo base_url("AdministratorArea")?>">
 
-                <img src="<?php echo base_url('//assets/img/LOGO-Main.png') ?>"  style="margin: 0px 15px 0;max-width: 180px;"/>
+                <img src="<?php echo base_url('/assets/img/LOGO-Backend.png') ?>"  style="margin: 0px 15px 0;max-width: 180px;"/>
 
             </a>
 
