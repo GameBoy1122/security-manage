@@ -70,7 +70,7 @@
                             <div class="col-auto ">
                                 <div class="btn icon m-0"><i class="fa-solid fa-phone" style="color: #ffffff;"></i></div>
                             </div>
-                            <div class="col-auto">
+                            <div class="col-xl-8 col-lg-6 col-sm-6 col-6">
                                 <?php echo $contact_list->tel ?><br><?php echo $contact_list->mobile_phone ?>
                             </div>
                         </div>
