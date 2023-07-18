@@ -12,9 +12,14 @@ class Contact extends CI_Controller
 	 **           MANDATORY SCRIPT
     /** ------------------------------------------------------- **/
 	public function index()
-	{
+	{	
+		$this->load->model("Contact_us_model");
+		$model_filter = new stdClass();
+		$model_filter->where["status"] = "ACTIVATE";
+		$model_filter->order_by = 'contact_us_id ASC';
+		$contacts = $this->Contact_us_model->search($model_filter);
 		$this->load->view('header');
-		$this->load->view('contact');
+		$this->load->view('contact', compact('contacts'));
 		$this->load->view('footer');
 	}
 }
