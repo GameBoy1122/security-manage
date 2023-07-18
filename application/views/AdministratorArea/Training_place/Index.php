@@ -10,7 +10,7 @@ $codeigniter_instance = &get_instance();
 
 $configurations = array(
 
-    "PAGE_TITLE" => "Director",
+    "PAGE_TITLE" => "Contact us",
 
 );
 
@@ -174,7 +174,7 @@ $configurations = array(
 
                                         <div class="kt-portlet__head-wrapper">
 
-                                            <a href="<?php echo base_url('AdministratorArea/Director/edit'); ?>">
+                                            <a href="<?php echo base_url('AdministratorArea/Contact_us/edit'); ?>">
 
                                                 <button type="button" class="btn btn-brand btn-icon-sm">
 
@@ -466,7 +466,7 @@ $configurations = array(
 
                     type: 'remote',
 
-                    source: '<?php echo base_url('AdministratorArea/Director/datatables'); ?>',
+                    source: '<?php echo base_url('AdministratorArea/Contact_us/datatables'); ?>',
 
                     pageSize: 10,
 
@@ -510,7 +510,7 @@ $configurations = array(
 
                     {
 
-                        field: 'director_id',
+                        field: 'contact_us_id',
 
                         title: '#',
 
@@ -527,9 +527,9 @@ $configurations = array(
                     },
                     {
 
-                        field: 'title',
+                        field: 'address',
 
-                        title: 'TITLE',
+                        title: 'ADDRESS',
 
                       
 
@@ -541,9 +541,9 @@ $configurations = array(
 
                     {
 
-                        field: 'description',
+                        field: 'email',
 
-                        title: 'DESCRIPTION',
+                        title: 'EMAIL',
 
                         
 
@@ -579,9 +579,9 @@ $configurations = array(
 
                         template: function(row) {
 
-                            var db_id = row['director_id'];
+                            var db_id = row['contact_us_id'];
 
-                            var action_header = '<a href="<?php echo base_url('AdministratorArea/Director/edit/'); ?>' + db_id + '"class="btn btn-sm btn-clean btn-icon btn-icon-sm" title="Edit details">' +
+                            var action_header = '<a href="<?php echo base_url('AdministratorArea/Contact_us/edit/'); ?>' + db_id + '"class="btn btn-sm btn-clean btn-icon btn-icon-sm" title="Edit details">' +
 
                                 '<i class="flaticon2-paper"></i>' +
 
@@ -595,7 +595,7 @@ $configurations = array(
 
                                 '</a>' +
 
-                                '<input type="hidden" id="' + db_id + '" value="<?php echo base_url('AdministratorArea/Director/delete/'); ?>' + db_id + '">';
+                                '<input type="hidden" id="' + db_id + '" value="<?php echo base_url('AdministratorArea/Contact_us/delete/'); ?>' + db_id + '">';
 
                             $(document).ready(function() {
 

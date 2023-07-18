@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-class Contact_us extends CI_Controller
+class Training_place extends CI_Controller
 
 {
 
@@ -28,7 +28,7 @@ class Contact_us extends CI_Controller
 
 	{
  
-        $this->load->model("Contact_us_model");
+        $this->load->model("Training_place_model");
 
 
 
@@ -36,15 +36,15 @@ class Contact_us extends CI_Controller
 
         $page->get_first = true;
 
-        $page = $this->Contact_us_model->search($page);
+        $page = $this->Training_place_model->search($page);
 
 
 
-        $this->load->view("AdministratorArea/Contact_us/Index", compact("page"));
+        $this->load->view("AdministratorArea/Training_place/Index", compact("page"));
 
 	}
 
-	public function edit($Contact_us_id = null)
+	public function edit($Training_place_id = null)
 
 	{
 
@@ -54,12 +54,12 @@ class Contact_us extends CI_Controller
 
 		/** ------------------------------------------------------- **/
 
-        $this->load->model("Contact_us_model");
+        $this->load->model("Training_place_model");
         $this->load->library("encryption_library");
         $this->load->library("response_library");
         $this->load->library("guid_library");
 
-        $Contact_uss = $this->Contact_us_model->search();
+        $Training_places = $this->Training_place_model->search();
 
 
 		/** ------------------------------------------------------- **
@@ -72,15 +72,15 @@ class Contact_us extends CI_Controller
 
         {
 
-            if($Contact_us_id != null)
+            if($Training_place_id != null)
 
             {
 
-                $Contact_us = $this->Contact_us_model->find($Contact_us_id);
+                $Training_place = $this->Training_place_model->find($Training_place_id);
 
-                $Contact_us->modified_date = date("Y-m-d h:i:s");
+                $Training_place->modified_date = date("Y-m-d h:i:s");
 
-                $Contact_us->modified_by = $this->session->userdata("__administrator::administrator_id");
+                $Training_place->modified_by = $this->session->userdata("__administrator::administrator_id");
 
                 
 
@@ -90,31 +90,26 @@ class Contact_us extends CI_Controller
 
             {
 
-                $Contact_us = new stdClass();
+                $Training_place = new stdClass();
 
-                $Contact_us->created_date = date("Y-m-d h:i:s");
+                $Training_place->created_date = date("Y-m-d h:i:s");
 
-                $Contact_us->created_by = $this->session->userdata("__administrator::administrator_id");
+                $Training_place->created_by = $this->session->userdata("__administrator::administrator_id");
 
             }
 
-            $Contact_us->status = $this->input->post("status");
-            $Contact_us->address = $this->input->post("address");
-            $Contact_us->email = $this->input->post("email");
-            $Contact_us->tel = $this->input->post("tel");
-            $Contact_us->mobile_phone = $this->input->post("mobile_phone");
-            $Contact_us->facebook = $this->input->post("facebook");
-            $Contact_us->line = $this->input->post("line");
-            $Contact_us->location = $this->input->post("location");
+            $Training_place->status = $this->input->post("status");
+            $Training_place->address = $this->input->post("address");
+            $Training_place->location = $this->input->post("location");
  
-            $Contact_us_validated = array("code" => "0x0000-00000", "message" => "Server response success. Request process complete with no error.");
+            $Training_place_validated = array("code" => "0x0000-00000", "message" => "Server response success. Request process complete with no error.");
 
-            if($Contact_us_validated["code"] == "0x0000-00000")
+            if($Training_place_validated["code"] == "0x0000-00000")
 
             {
 
-                $Contact_us_id = $this->Contact_us_model->save($Contact_us);
-                $this->response_library->responseJSON($Contact_us_validated["code"], $Contact_us_validated["message"]);
+                $Training_place_id = $this->Training_place_model->save($Training_place);
+                $this->response_library->responseJSON($Training_place_validated["code"], $Training_place_validated["message"]);
 
             }
 
@@ -122,7 +117,7 @@ class Contact_us extends CI_Controller
 
             {
 
-                $this->response_library->responseJSON($Contact_us_validated["code"], $Contact_us_validated["message"]);
+                $this->response_library->responseJSON($Training_place_validated["code"], $Training_place_validated["message"]);
 
             }
 
@@ -136,7 +131,7 @@ class Contact_us extends CI_Controller
 
 		/** ------------------------------------------------------- **/
 
-        $Contact_us = $this->Contact_us_model->find($Contact_us_id);
+        $Training_place = $this->Training_place_model->find($Training_place_id);
 
 
 
@@ -150,17 +145,17 @@ class Contact_us extends CI_Controller
 
         $data = array(
 
-            "Contact_us" => $Contact_us
+            "Training_place" => $Training_place
 
         );
 
-        $this->load->view("AdministratorArea/Contact_us/Edit",$data);
+        $this->load->view("AdministratorArea/Training_place/Edit",$data);
 
 	}
 
 
 
-    public function delete($Contact_us_id = null)
+    public function delete($Training_place_id = null)
 
     {
 
@@ -170,7 +165,7 @@ class Contact_us extends CI_Controller
 
         /** ------------------------------------------------------- **/
 
-        $this->load->model("Contact_us_model");
+        $this->load->model("Training_place_model");
 
 
 
@@ -184,27 +179,27 @@ class Contact_us extends CI_Controller
 
         /** ------------------------------------------------------- **/
 
-        $Contact_us = $this->Contact_us_model->find($Contact_us_id);
+        $Training_place = $this->Training_place_model->find($Training_place_id);
 
-        $Contact_us->modified_date = date("Y-m-d h:i:s");
+        $Training_place->modified_date = date("Y-m-d h:i:s");
 
-        $Contact_us->modified_by = $this->session->userdata("__administrator::administrator_id");
+        $Training_place->modified_by = $this->session->userdata("__administrator::administrator_id");
 
-        $Contact_us->status = "REMOVED";
+        $Training_place->status = "REMOVED";
 
 
 
-        $Contact_us_validated = array("code" => "0x0000-00000", "message" => "Server response success. Request process complete with no error.");
+        $Training_place_validated = array("code" => "0x0000-00000", "message" => "Server response success. Request process complete with no error.");
 
-        if($Contact_us_validated["code"] == "0x0000-00000")
+        if($Training_place_validated["code"] == "0x0000-00000")
 
         {
 
-            $this->Contact_us_model->save($Contact_us);
+            $this->Training_place_model->save($Training_place);
 
 
 
-            $this->response_library->responseJSON($Contact_us_validated["code"], $Contact_us_validated["message"]);
+            $this->response_library->responseJSON($Training_place_validated["code"], $Training_place_validated["message"]);
 
         }
 
@@ -212,7 +207,7 @@ class Contact_us extends CI_Controller
 
         {
 
-            $this->response_library->responseJSON($Contact_us_validated["code"], $Contact_us_validated["message"]);
+            $this->response_library->responseJSON($Training_place_validated["code"], $Training_place_validated["message"]);
 
         }
 
@@ -234,7 +229,7 @@ class Contact_us extends CI_Controller
 
             $this->load->library("datatables_library");
 
-            $this->load->model("Contact_us_model");
+            $this->load->model("Training_place_model");
 
 
 
@@ -242,11 +237,11 @@ class Contact_us extends CI_Controller
 
             $model_filter->custom_where = "status IN ('ACTIVATE','SUSPEND')";
 
-            $Contact_us = $this->Contact_us_model->search($model_filter);
+            $Training_place = $this->Training_place_model->search($model_filter);
 
 
 
-            print_r(json_encode($Contact_us)); 
+            print_r(json_encode($Training_place)); 
 
        
 

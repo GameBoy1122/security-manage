@@ -173,7 +173,7 @@
 					<a href="<?php echo base_url('Course') ?>"><button type="submit" class="btn btn_click">ดูหลักสูตร</button></a>
 				</div>
 				<div class="col-6  ">
-					<a href="<?php echo base_url('Enroll_detail') ?>"><button type="submit" class="btn btn_click">สมัคร</button></a>
+					<a href="<?php echo base_url('Enroll_detail') ?>"><button type="submit" class="btn btn_click">สมัครเรียน มส.16</button></a>
 				</div>
 			</div>
 
@@ -204,7 +204,7 @@
 				<?php } ?>
 			</div>
 			<div class="row justify-content-center mt-5 mb-5 pt-3 ">
-				<button type="submit" class="btn btn_all">ดูทั้งหมด</button>
+				<button type="submit" class="btn btn_all">ดูข่าวทั้งหมด</button>
 			</div>
 
 	</section>
