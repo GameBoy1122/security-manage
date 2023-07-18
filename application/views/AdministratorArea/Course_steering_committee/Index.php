@@ -593,7 +593,7 @@ $configurations = array(
 
                         template: function(row) {
 
-                            var db_id = row['Course_steering_committee_id'];
+                            var db_id = row['course_steering_committee_id'];
 
                             var action_header = '<a href="<?php echo base_url('AdministratorArea/Course_steering_committee/edit/'); ?>' + db_id + '"class="btn btn-sm btn-clean btn-icon btn-icon-sm" title="Edit details">' +
 

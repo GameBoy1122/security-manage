@@ -18,8 +18,15 @@ class Index extends CI_Controller
 		$model_filter->where["status"] = "ACTIVATE";
 		$model_filter->order_by = 'news_id ASC';
 		$news = $this->News_model->search($model_filter);
+
+		$this->load->model("Bannermain_model");
+		$model_filter = new stdClass();
+		$model_filter->where["status"] = "ACTIVATE";
+		$model_filter->order_by = 'bannermain_id ASC';
+		$bannermain = $this->Bannermain_model->search($model_filter);
+
 		$this->load->view('header');
-		$this->load->view('index', compact('news'));
+		$this->load->view('index', compact('news','bannermain'));
 		$this->load->view('footer');
 	}
 }
