@@ -54,11 +54,13 @@
         <div class="container">
             <div class="row ">
 
-
-                <div class="col-12 ">
-                    <a href="<?php echo base_url('/assets/uploads/File/Mind_Map_มส.15.pdf') ?>" download><button class="btn file text-truncate mb-3"><img class="ps-2 pe-3" src="<?php echo base_url('assets/img/filepic.png') ?>">Mind Map มส.15</button></a>
-                </div>
-
+                <?php foreach ($downloads as $key => $download_list) { ?>
+                    
+                        <div class="col-12 ">
+                            <a href="<?php echo $download_list -> file ?>" download><button class="btn file text-truncate mb-3"><img class="ps-2 pe-3" src="<?php echo base_url('assets/img/filepic.png') ?>"><?php echo $download_list -> title ?></button></a>
+                        </div>
+                    
+                <?php } ?>
 
             </div>
         </div>
