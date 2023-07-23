@@ -104,7 +104,7 @@ $head_open = "kt-menu__item--here kt-menu__item--open";
                     </li>
 
                     <li class="kt-menu__item kt-menu__item--submenu d-none <?php if ($class == 'Administrator' || $class == 'administrator_group') echo $head_open;
-                                                                    else echo ''; ?>" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+                                                                            else echo ''; ?>" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
 
                         <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
 
@@ -202,10 +202,10 @@ $head_open = "kt-menu__item--here kt-menu__item--open";
                                         <span class="kt-menu__link-text">Banner main</span>
                                     </a>
                                 </li>
-                               
-                               
+
+
                                 <!-- <li class="kt-menu__item kt-menu__item--<?php if ($class == 'Landingpage') echo 'active';
-                                                                        else echo ''; ?>" aria-haspopup="true">
+                                                                                else echo ''; ?>" aria-haspopup="true">
 
                                     <a href="<?php echo base_url("AdministratorArea/landingpage/edit/1") ?>" class="kt-menu__link ">
 
@@ -221,7 +221,7 @@ $head_open = "kt-menu__item--here kt-menu__item--open";
 
                     </li>
 
-                    <li class="kt-menu__item kt-menu__item--submenu <?php if ($class == 'Qualified_committee' || $class == 'Course_steering_committee' || $class == 'Course_staff') echo $head_open;
+                    <li class="kt-menu__item kt-menu__item--submenu <?php if ($class == 'Qualified_committee' || $class == 'Course_steering_committee' || $class == 'Course_staff' || $class == 'Lecturer') echo $head_open;
                                                                     else echo ''; ?>" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
 
                         <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
@@ -239,7 +239,7 @@ $head_open = "kt-menu__item--here kt-menu__item--open";
                             <span class="kt-menu__arrow"></span>
 
                             <ul class="kt-menu__subnav">
-                               
+
                                 <li class="kt-menu__item kt-menu__item--<?php if ($class == 'Qualified_committee') echo 'active';
                                                                         else echo ''; ?>" aria-haspopup="true">
 
@@ -252,7 +252,7 @@ $head_open = "kt-menu__item--here kt-menu__item--open";
                                 </li>
                             </ul>
                             <ul class="kt-menu__subnav">
-                               
+
                                 <li class="kt-menu__item kt-menu__item--<?php if ($class == 'Course_steering_committee') echo 'active';
                                                                         else echo ''; ?>" aria-haspopup="true">
 
@@ -265,18 +265,31 @@ $head_open = "kt-menu__item--here kt-menu__item--open";
                                 </li>
                             </ul>
                             <ul class="kt-menu__subnav">
-                               
-                               <li class="kt-menu__item kt-menu__item--<?php if ($class == 'Course_staff') echo 'active';
-                                                                       else echo ''; ?>" aria-haspopup="true">
 
-                                   <a href="<?php echo base_url("AdministratorArea/Course_staff") ?>" class="kt-menu__link ">
+                                <li class="kt-menu__item kt-menu__item--<?php if ($class == 'Course_staff') echo 'active';
+                                                                        else echo ''; ?>" aria-haspopup="true">
 
-                                       <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
+                                    <a href="<?php echo base_url("AdministratorArea/Course_staff") ?>" class="kt-menu__link ">
 
-                                       <span class="kt-menu__link-text">Course Staff</span>
-                                   </a>
-                               </li>
-                           </ul>
+                                        <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
+
+                                        <span class="kt-menu__link-text">Course Staff</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="kt-menu__subnav">
+
+                                <li class="kt-menu__item kt-menu__item--<?php if ($class == 'Lecturer') echo 'active';
+                                                                        else echo ''; ?>" aria-haspopup="true">
+
+                                    <a href="<?php echo base_url("AdministratorArea/Lecturer") ?>" class="kt-menu__link ">
+
+                                        <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
+
+                                        <span class="kt-menu__link-text">Lecturer</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
 
                     </li>
@@ -314,7 +327,7 @@ $head_open = "kt-menu__item--here kt-menu__item--open";
                         </div>
 
                     </li>
-                    
+
                     <li class="kt-menu__item kt-menu__item--submenu <?php if ($class == 'News') echo $head_open;
                                                                     else echo ''; ?>" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
 
@@ -384,7 +397,7 @@ $head_open = "kt-menu__item--here kt-menu__item--open";
 
                     </li>
 
-                    <li class="kt-menu__item kt-menu__item--submenu <?php if ($class == 'contact_us'|| $class == 'Training_place' ) echo $head_open;
+                    <li class="kt-menu__item kt-menu__item--submenu <?php if ($class == 'contact_us' || $class == 'Training_place') echo $head_open;
                                                                     else echo ''; ?>" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
 
                         <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
@@ -427,7 +440,7 @@ $head_open = "kt-menu__item--here kt-menu__item--open";
                             </ul>
                         </div>
                     </li>
-            
+
                 <?php
 
                 }
