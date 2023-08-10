@@ -107,9 +107,13 @@
 	<section id="banner">
 		<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
 			<div class="carousel-indicators">
-				<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-				<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-				<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+				<?php foreach ($bannermain as $key => $bannermain_list) { ?>
+					<?php if ($key == 0) { ?>
+						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="<?php echo $key ?>" class="active" aria-current="true" aria-label="Slide <?php echo $key ?>"></button>
+					<?php } else { ?>
+						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="<?php echo $key ?>" aria-label="Slide <?php echo $key ?>"></button>
+					<?php } ?>
+				<?php } ?>
 			</div>
 			<div class="carousel-inner">
 				<?php foreach ($bannermain as $key => $bannermain_list) { ?>

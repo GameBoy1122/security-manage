@@ -148,6 +148,16 @@
       <td colspan="2">รหัสไปรษณีย์ <?php echo $user->address_postcode ?></td>
     </tr>
     <tr>
+      <td colspan="1" style="width: 25%;">โทรศัพท์</td>
+      <td colspan="1">ที่ทำงาน <?php echo $user->work_address ?></td>
+      <td colspan="1">โทรสาร <?php echo $user->work_fax ?></td>>
+    </tr>
+    <tr>
+      <td colspan="1" style="width: 25%;"></td>
+      <td colspan="1">บ้านพัก <?php echo $user->work_house ?></td>
+      <td colspan="1">มือถือ <?php echo $user->work_mobile ?></td>>
+    </tr>
+    <tr>
       <td colspan="1" style="width: 25%;">E-mail</td>
       <td colspan="3"><?php echo $user->work_email ?></td>
     </tr>
@@ -214,8 +224,8 @@
     <tr>
       <td colspan="1" style="width: 25%;"></td>
       <td colspan="1">เชื้อชาติ <?php echo $user->marital_ethnicity ?></td>
-      <td colspan="1">สัญชาติ <?php echo $user->marital_ethnicity ?></td>
-      <td colspan="1">ศาสนา <?php echo $user->marital_ethnicity ?></td>
+      <td colspan="1">สัญชาติ <?php echo $user->marital_nationality ?></td>
+      <td colspan="1">ศาสนา <?php echo $user->marital_religion ?></td>
     </tr>
   </table>
   <h2>๒.ข้อมูลการศึกษา </h2>
